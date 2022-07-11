@@ -1,0 +1,27 @@
+{
+  "name": "2022.jsconf.kr",
+  "version": "1.0.0",
+  "description": "🎉 JSConf Korea 2022 Website",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build"
+  },
+  "keywords": [
+    "jsconf",
+    "jsconf.kr",
+    "jsconf korea"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^12.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.7.4"
+  }
+}
