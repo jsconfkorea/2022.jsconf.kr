@@ -14,14 +14,28 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "lib": "link:./src/lib",
+    "locales": "link:./src/locales",
+    "components": "link:./src/pages/components",
     "next": "^12.2.2",
+    "next-intl": "^2.7.4",
+    "notion-client": "^6.12.9",
+    "src": "link:./src",
+    "pages": "link:./pages",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-notion-x": "^6.12.10",
+    "react-reveal": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.12",
+    "tailwindcss": "^3.1.5",
     "typescript": "^4.7.4"
   }
 }

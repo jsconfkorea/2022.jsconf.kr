@@ -10,5 +10,6 @@
     "source.fixAll.tslint": true,
     "source.fixAll.stylelint": true,
     "source.organizeImports": true
-  }
+  },
+  "editor.formatOnSave": true
 }
