@@ -1,42 +1,38 @@
+import Footer from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import { messages } from 'locales/messages'
 import { GetStaticProps } from 'next'
 import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
-import Script from 'next/script'
 import Fade from 'react-reveal/Fade'
 
-export default function () {
+export default function HomePage() {
   const t = useTranslations('hero')
 
   return (
     <>
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"
-        strategy="beforeInteractive"
-      />
       <div className="flex h-[100dvh] h-full w-full flex-row">
         <Navbar />
 
         {/* Body */}
-        <div className="mt-14 flex-1 snap-y snap-mandatory overflow-y-auto">
+        <div className="flex-1 snap-y snap-mandatory overflow-y-auto">
           {/* Hero */}
           <div className="relative h-full snap-start bg-black text-white">
-            <div className="container grid h-full w-full px-2 pr-6 pt-[25vh] text-right">
-              <div className="flex flex-col gap-6 justify-self-end">
+            <div className="container grid h-full w-full px-2 pr-6 pt-[33vh] text-right">
+              <div className="flex flex-col gap-6 justify-self-end sm:gap-12">
                 <Fade bottom duration={700}>
                   <h1 className="self-end text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
                     JSConf Korea 2022
                   </h1>
                 </Fade>
-                <div className="flex flex-col gap-2 self-end sm:gap-4">
+                <div className="flex flex-col gap-2 self-end sm:gap-6">
                   <Fade bottom duration={700} delay={150}>
-                    <div className="flex justify-end gap-2.5">
+                    <div className="flex justify-end gap-2.5 sm:gap-5">
                       <h2 className="inline text-xl sm:text-4xl">
                         {t('date')}
                       </h2>
                       <Image
-                        className="inline-block aspect-square self-center sm:h-8"
+                        className="inline-block aspect-square self-center sm:h-8 sm:w-8"
                         width={20}
                         height={20}
                         src="https://cloudflare-ipfs.com/ipfs/bafybeia3wcjrh2ec756iybf34giqhcjkesy2kbwnjb3v3fdqrilxzxykpy"
@@ -46,12 +42,12 @@ export default function () {
                     </div>
                   </Fade>
                   <Fade bottom duration={700} delay={300}>
-                    <div className="flex justify-end gap-2.5">
+                    <div className="flex justify-end gap-2.5 sm:gap-5">
                       <h2 className="inline text-lg sm:text-4xl">
                         {t('location')}
                       </h2>
                       <Image
-                        className="inline-block aspect-square self-center sm:h-8"
+                        className="inline-block aspect-square self-center sm:h-8 sm:w-8"
                         width={20}
                         height={20}
                         src="https://cloudflare-ipfs.com/ipfs/bafybeic7ruprr7aq2w6kzo7l6ee73krt2itn4rad255w2i27shyrwjxaqi"
@@ -82,19 +78,16 @@ export default function () {
           </div>
 
           {/* Program */}
-          <div className="grid h-full snap-start place-content-center bg-amber-400">
+          {/* <div className="grid h-full snap-start place-content-center bg-amber-400">
             <h1 className="text-center text-xl text-white">프로그램</h1>
-          </div>
+          </div> */}
 
           {/* Sponsors */}
           <div className="grid h-full snap-start place-content-center bg-slate-500">
             <h1 className="text-center text-xl text-white">스폰서</h1>
           </div>
 
-          {/* Footer */}
-          <div className="grid h-72 snap-start place-content-center bg-red-400">
-            <h1 className="text-center text-xl text-white">Footer</h1>
-          </div>
+          <Footer />
         </div>
       </div>
     </>

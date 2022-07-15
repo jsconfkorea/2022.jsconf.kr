@@ -12,6 +12,7 @@ export const getStaticProps: GetStaticProps = async ({
     props: {
       messages: messages[locale],
       recordMap: await recordMap[locale][pageName],
+      pageName,
     },
     revalidate: 1,
   }
