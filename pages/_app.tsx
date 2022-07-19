@@ -1,15 +1,21 @@
 import { GoogleAnalytics } from 'components/GoogleAnalytics'
 import { SEOProvider } from 'components/SEOProvider'
+import { messages } from 'locales/messages'
 import { NextIntlProvider } from 'next-intl'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import 'pretendard/dist/web/static/pretendard.css'
-import '../styles/globals.css'
+import 'styles/globals.css'
+import { isProd } from 'utils/isProd'
+import { isServer } from 'utils/isServer'
 
-console.log('%c👋', 'font-size: 10rem')
+if (!isServer()) {
+  console.log('%c👋', 'font-size: 10rem')
+}
 
 export default function App({ Component, pageProps }: AppProps) {
-  const { messages } = pageProps
+  const { locale } = useRouter()
 
   return (
     <>
@@ -89,13 +95,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <NextIntlProvider messages={messages}>
+
+      <NextIntlProvider messages={messages[locale]}>
         <SEOProvider>
           <Component {...pageProps} />
         </SEOProvider>
       </NextIntlProvider>
 
-      <GoogleAnalytics id="G-ZTPXBNHJF9" />
+      {isProd && <GoogleAnalytics id="G-ZTPXBNHJF9" />}
     </>
   )
 }

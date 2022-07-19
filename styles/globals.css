@@ -14,10 +14,13 @@ html,
 body,
 #__next {
   overflow: hidden;
-  height: 100%;
 }
 
 *::selection {
   background-color: #efdb4f;
   color: #000;
+}
+
+html {
+  overflow-y: auto;
 }

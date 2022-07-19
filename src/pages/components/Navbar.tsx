@@ -3,14 +3,14 @@ import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const menus = ['about', 'code-of-conduct', 'sponsorship']
+const menus = ['about', 'code-of-conduct', 'sponsors', 'sponsorship']
 
 export function Navbar() {
   const t = useTranslations('nav')
   const { pathname, query, locale } = useRouter()
 
   return (
-    <nav className="navbar absolute z-50 bg-white text-black drop-shadow-md">
+    <nav className="navbar fixed z-50 bg-white text-black drop-shadow-md">
       <Link href="/" className="aspect-square">
         <a className="aspect-square h-full px-1">
           <Image
@@ -38,6 +38,7 @@ export function Navbar() {
           <Link
             href={{ pathname, query }}
             locale={locale === 'ko' ? 'en' : 'ko'}
+            scroll={false}
           >
             <a className="w-28 justify-center p-2.5 text-lg">
               {locale === 'ko' ? t('english') : t('korean')}
@@ -73,14 +74,11 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li
-            onClick={() => {
-              ;(document.activeElement as HTMLElement)?.blur()
-            }}
-          >
+          <li>
             <Link
               href={{ pathname, query }}
               locale={locale === 'ko' ? 'en' : 'ko'}
+              scroll={false}
             >
               <a className="justify-center p-2.5 text-lg">
                 {locale === 'ko' ? t('english') : t('korean')}

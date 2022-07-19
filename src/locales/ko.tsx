@@ -5,7 +5,7 @@ export const ko = {
   nav: {
     about: '💁 행사소개',
     'code-of-conduct': '📜 핵심원칙',
-    sponsors: '후원사',
+    sponsors: '✨ 후원사',
     sponsorship: '🏅 후원사 모집',
     'privacy-policy': '🔒 개인정보 처리방침',
 

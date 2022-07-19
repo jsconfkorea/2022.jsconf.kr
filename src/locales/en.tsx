@@ -7,7 +7,7 @@ export const en: typeof ko = {
   nav: {
     about: '💁 About',
     'code-of-conduct': '📜 Code of Conduct',
-    sponsors: 'Sponsors',
+    sponsors: '✨ Sponsors',
     sponsorship: '🏅 Sponsorship',
     'privacy-policy': '🔒 Privacy Policy',
 
