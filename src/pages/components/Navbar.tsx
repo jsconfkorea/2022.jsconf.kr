@@ -2,20 +2,12 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useRef } from 'react'
-import { useClickAway, useToggle } from 'react-use'
 
 const menus = ['about', 'code-of-conduct', 'sponsorship']
 
 export function Navbar() {
   const t = useTranslations('nav')
   const { pathname, query, locale } = useRouter()
-  const [on, toggle] = useToggle(false)
-  const ref = useRef(null)
-
-  useClickAway(ref, () => {
-    toggle(false)
-  })
 
   return (
     <nav className="navbar absolute z-50 bg-white text-black drop-shadow-md">
@@ -54,36 +46,15 @@ export function Navbar() {
         </li>
       </ul>
 
-      <div ref={ref} className="dropdown-end dropdown sm:hidden">
-        <label
-          tabIndex={0}
-          className="swap-rotate btn swap btn-ghost btn-square"
-        >
-          <input
-            checked={on}
-            type="checkbox"
-            onChange={({ currentTarget, currentTarget: { checked } }) => {
-              if (!checked) currentTarget.blur()
-              toggle(checked)
-            }}
-          />
-
+      <div className="dropdown-end dropdown sm:hidden">
+        <label tabIndex={0} className="btn btn-ghost btn-square">
           <svg
-            className="swap-off fill-current"
+            className="fill-current"
             width="32"
             height="32"
             viewBox="0 0 512 512"
           >
             <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-          </svg>
-
-          <svg
-            className="swap-on fill-current"
-            width="32"
-            height="32"
-            viewBox="0 0 512 512"
-          >
-            <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
           </svg>
         </label>
         <ul
@@ -91,18 +62,22 @@ export function Navbar() {
           className="dropdown-content menu rounded-box mt-4 w-[calc(100vw-16px)] bg-white p-2 shadow drop-shadow-md focus:visible"
         >
           {menus.map((menu) => (
-            <li key={menu}>
+            <li
+              key={menu}
+              onClick={() => {
+                ;(document.activeElement as HTMLElement)?.blur()
+              }}
+            >
               <Link href={`/${menu}`}>
-                <a
-                  className="justify-center p-2.5 text-lg"
-                  onClick={() => toggle(false)}
-                >
-                  {t(menu)}
-                </a>
+                <a className="justify-center p-2.5 text-lg">{t(menu)}</a>
               </Link>
             </li>
           ))}
-          <li>
+          <li
+            onClick={() => {
+              ;(document.activeElement as HTMLElement)?.blur()
+            }}
+          >
             <Link
               href={{ pathname, query }}
               locale={locale === 'ko' ? 'en' : 'ko'}

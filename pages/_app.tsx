@@ -1,9 +1,12 @@
+import { GoogleAnalytics } from 'components/GoogleAnalytics'
 import { SEOProvider } from 'components/SEOProvider'
 import { NextIntlProvider } from 'next-intl'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import 'pretendard/dist/web/static/pretendard.css'
 import '../styles/globals.css'
+
+console.log('%c👋', 'font-size: 10rem')
 
 export default function App({ Component, pageProps }: AppProps) {
   const { messages } = pageProps
@@ -91,6 +94,8 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </SEOProvider>
       </NextIntlProvider>
+
+      <GoogleAnalytics id="G-ZTPXBNHJF9" />
     </>
   )
 }
