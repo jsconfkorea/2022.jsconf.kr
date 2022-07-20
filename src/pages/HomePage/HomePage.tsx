@@ -80,23 +80,22 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+              <Fade duration={700} delay={1000}>
+                <div className="absolute bottom-0 z-40 w-full">
+                  <svg
+                    className="fill:white mx-auto h-10 w-10 animate-bounce p-2 will-change-transform"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </Fade>
             </div>
-
-            <Fade duration={700} delay={1000}>
-              <div className="absolute bottom-0 w-full">
-                <svg
-                  className="fill:white mx-auto h-10 w-10 animate-bounce p-2 will-change-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-            </Fade>
           </div>
 
           {/* Speakers */}

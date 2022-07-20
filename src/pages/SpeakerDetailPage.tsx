@@ -40,11 +40,10 @@ export default function SpeakerDetailPage({ recordMap, pageName }: PageProps) {
       <div className="flex w-full flex-row">
         <Navbar />
 
-        <div className="mt-14 w-full flex-1 bg-white text-white">
+        <div className="mt-16 w-full flex-1 bg-white text-white">
           <Fade bottom distance="1rem" duration={700}>
             <NotionRenderer
               className="!bg-white"
-              bodyClassName="!pt-32"
               recordMap={recordMap}
               fullPage
               // darkMode

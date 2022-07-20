@@ -306,10 +306,6 @@ const p5Script = (() => {
     }
   }
 
-  window.addEventListener('deviceorientation', ({ alpha, beta, gamma }) => {
-    console.log({ alpha, beta, gamma })
-  })
-
   const draw: SketchProps['draw'] = (p5) => {
     mouse.set(p5.mouseX - center.x, p5.mouseY - center.y)
     // angle -= radians(0.5);

@@ -32,7 +32,8 @@ html {
     sans-serif !important;
 }
 
-.notion-block-368463f1db9a494991579322a4cdff1b > div {
+figure.notion-block-368463f1db9a494991579322a4cdff1b > div,
+figure.notion-block-8f632ea3044c436fb47ca7efb9dfa4cc > div {
   aspect-ratio: 2/1 !important;
 }
 
