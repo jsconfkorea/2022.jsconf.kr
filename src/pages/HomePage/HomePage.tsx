@@ -1,18 +1,13 @@
 import Footer from 'components/Footer'
 import { Graphic } from 'components/Graphic'
 import { Navbar } from 'components/Navbar'
-import type { InferGetStaticPropsType } from 'next'
+import { Sponsors } from 'components/Sponsors'
 import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
-import Link from 'next/link'
-import { getStaticProps } from 'pages'
-import { NotionRenderer } from 'react-notion-x'
 import 'react-notion-x/src/styles.css'
 import Fade from 'react-reveal/Fade'
 
-type PageProps = InferGetStaticPropsType<typeof getStaticProps>
-
-export default function HomePage({ recordMap }: PageProps) {
+export default function HomePage() {
   const t = useTranslations('hero')
 
   return (
@@ -94,19 +89,8 @@ export default function HomePage({ recordMap }: PageProps) {
           </div> */}
 
           {/* Sponsors */}
-          <div className="grid place-content-center bg-white">
-            <NotionRenderer
-              className="!w-screen"
-              // bodyClassName="!pt-32"
-              recordMap={recordMap}
-              // darkMode
-              fullPage
-              disableHeader
-              components={{
-                nextImage: Image,
-                nextLink: Link,
-              }}
-            />
+          <div className="grid bg-white p-24 px-8">
+            <Sponsors />
           </div>
 
           <Footer />

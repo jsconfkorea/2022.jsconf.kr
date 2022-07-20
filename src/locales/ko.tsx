@@ -16,4 +16,10 @@ export const ko = {
     date: '2022년 9월 16-17일',
     location: '노들섬 다목적 홀 숲',
   },
+  sponsors: {
+    Sponsors: '후원사',
+    'Gold Sponsor': '골드등급 후원사',
+    'Silver Sponsor': '실버등급 후원사',
+    'Bronze Sponsor': '브론즈등급 후원사',
+  },
 }

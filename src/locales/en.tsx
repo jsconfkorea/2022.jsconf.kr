@@ -18,4 +18,10 @@ export const en: typeof ko = {
     date: 'Sep. 16-17th, 2022',
     location: 'Nodeul Island Forest Multi-Hall',
   },
+  sponsors: {
+    Sponsors: 'Sponsors',
+    'Gold Sponsor': 'Gold Sponsor',
+    'Silver Sponsor': 'Silver Sponsor',
+    'Bronze Sponsor': 'Bronze Sponsor',
+  },
 } as const
