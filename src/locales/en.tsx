@@ -10,6 +10,7 @@ export const en: typeof ko = {
     'code-of-conduct': '📜 Code of Conduct',
     sponsors: '✨ Sponsors',
     sponsorship: '🏅 Sponsorship',
+    scholarship: '🎓 Scholarship',
     'privacy-policy': '🔒 Privacy Policy',
 
     english: 'English',

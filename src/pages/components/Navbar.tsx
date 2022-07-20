@@ -8,6 +8,7 @@ const menus = [
   'speakers',
   'sponsors',
   'sponsorship',
+  'scholarship',
   'code-of-conduct',
 ]
 
@@ -32,7 +33,7 @@ export function Navbar() {
 
       <div className="flex-1" />
 
-      <ul className="menu menu-horizontal hidden gap-1 p-0 sm:flex">
+      <ul className="menu menu-horizontal hidden gap-1 p-0 lg:flex">
         {menus.map((menu) => (
           <li key={menu}>
             <Link href={`/${menu}`}>
@@ -53,7 +54,7 @@ export function Navbar() {
         </li>
       </ul>
 
-      <div className="dropdown-end dropdown sm:hidden">
+      <div className="dropdown-end dropdown lg:hidden">
         <label tabIndex={0} className="btn btn-ghost btn-square">
           <svg
             className="fill-current"
