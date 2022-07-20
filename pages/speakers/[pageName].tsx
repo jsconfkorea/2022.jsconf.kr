@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps = async ({
       recordMap: await recordMap[locale][pageName],
       pageName,
     },
-    revalidate: 1,
+    revalidate: 10,
   }
 }
 
@@ -30,6 +30,6 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   }
 }
