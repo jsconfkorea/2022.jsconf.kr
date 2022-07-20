@@ -13,7 +13,7 @@ export const SEO: DefaultSeoProps = {
     title,
     images: [
       {
-        url: 'https://cloudflare-ipfs.com/ipfs/bafybeiee76oyiotuqhsji2bglyiiaupsflgz3nzqx4awlque7lsipg7e5a',
+        url: '/thumb.png',
         alt: title,
         type: 'image/png',
         width: 1280,

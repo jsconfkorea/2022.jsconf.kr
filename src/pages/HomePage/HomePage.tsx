@@ -23,7 +23,7 @@ export default function HomePage({ recordMap }: PageProps) {
         <div className="flex-1 overflow-y-auto">
           {/* Hero */}
 
-          <div className="relative">
+          <div className="relative bg-black">
             <Graphic />
 
             <div className="relative z-[40] h-screen bg-transparent text-white">
@@ -45,7 +45,7 @@ export default function HomePage({ recordMap }: PageProps) {
                           className="inline-block aspect-square self-center sm:h-8 sm:w-8"
                           width={20}
                           height={20}
-                          src="https://cloudflare-ipfs.com/ipfs/bafybeia3wcjrh2ec756iybf34giqhcjkesy2kbwnjb3v3fdqrilxzxykpy"
+                          src="/calendar.png"
                           alt="calendar-icon"
                           priority
                         />
@@ -60,7 +60,7 @@ export default function HomePage({ recordMap }: PageProps) {
                           className="inline-block aspect-square self-center sm:h-8 sm:w-8"
                           width={20}
                           height={20}
-                          src="https://cloudflare-ipfs.com/ipfs/bafybeic7ruprr7aq2w6kzo7l6ee73krt2itn4rad255w2i27shyrwjxaqi"
+                          src="/island.png"
                           alt="island-icon"
                           priority
                         />

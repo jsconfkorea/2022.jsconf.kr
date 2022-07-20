@@ -17,7 +17,7 @@ export function Navbar() {
             className="rounded-md"
             width={40}
             height={40}
-            src="https://cloudflare-ipfs.com/ipfs/bafybeihif7fowjzxe7gqsnyhj2nqx5zgdcjyksqzqhc4i5x66he42pquli"
+            src="/logo.png"
             alt="logo"
             priority
           />

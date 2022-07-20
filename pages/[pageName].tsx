@@ -1,4 +1,5 @@
 import { recordMap } from 'lib/notion'
+import { messages } from 'locales/messages'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 export { default } from 'src/pages/NotionPage/NotionPage'
@@ -9,8 +10,8 @@ export const getStaticProps: GetStaticProps = async ({
 }) => {
   return {
     props: {
-      // messages: messages[locale ?? 'ko'],
-      recordMap: await recordMap[locale ?? 'ko'][pageName],
+      messages: messages[locale],
+      recordMap: await recordMap[locale][pageName],
       pageName,
     },
     revalidate: 1,

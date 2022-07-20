@@ -96,7 +96,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <NextIntlProvider messages={messages[locale]}>
+      <NextIntlProvider
+        messages={pageProps.messages ?? messages[locale]}
+        locale={locale}
+      >
         <SEOProvider>
           <Component {...pageProps} />
         </SEOProvider>
