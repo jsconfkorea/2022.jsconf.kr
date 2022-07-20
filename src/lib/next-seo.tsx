@@ -8,7 +8,7 @@ export const SEO: DefaultSeoProps = {
 
   openGraph: {
     type: 'website',
-    url: 'https://2020.jsconf.kr',
+    url: 'https://2022.jsconf.kr',
     site_name: title,
     title,
     images: [
