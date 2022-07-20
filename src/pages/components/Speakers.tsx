@@ -39,7 +39,7 @@ export const Speakers = () => {
           delay={(i + 1) * 100}
         >
           <Link href={`/speakers/${speaker}`}>
-            <a className="self-center">
+            <a className="self-center hover:opacity-70">
               <div className="flex gap-4 sm:gap-8">
                 <Image
                   className="aspect-square h-20 w-20 rounded-lg sm:h-40 sm:w-40"

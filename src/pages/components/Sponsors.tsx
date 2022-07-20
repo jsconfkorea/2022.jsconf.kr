@@ -25,7 +25,7 @@ export const Sponsors = () => {
         <div className="flex flex-col gap-4 sm:gap-8">
           <h2 className="text-2xl font-semibold">{t('Gold Sponsor')}</h2>
           <Link href="https://imweb.me/">
-            <a className="self-center" target="_blank">
+            <a className="self-center hover:opacity-70" target="_blank">
               <Image
                 width={200}
                 height={100}
@@ -41,7 +41,7 @@ export const Sponsors = () => {
         <div className="flex flex-col gap-4 sm:gap-8">
           <h2 className="text-2xl font-semibold">{t('Silver Sponsor')}</h2>
           <Link href="https://www.labnote.co/">
-            <a className="self-center" target="_blank">
+            <a className="self-center hover:opacity-70" target="_blank">
               <Image
                 width={200}
                 height={100}
@@ -57,7 +57,7 @@ export const Sponsors = () => {
         <div className="flex flex-col gap-4 sm:gap-8">
           <h2 className="text-2xl font-semibold">{t('Bronze Sponsor')}</h2>
           <Link href="https://linepluscorp.com/">
-            <a className="self-center" target="_blank">
+            <a className="self-center hover:opacity-70" target="_blank">
               <Image
                 width={200}
                 height={100}
