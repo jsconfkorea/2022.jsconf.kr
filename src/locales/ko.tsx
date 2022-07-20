@@ -14,8 +14,9 @@ export const ko = {
     korean: '한국어',
   },
   hero: {
-    date: '2022년 9월 16-17일',
+    date: '2022년 9월 16일(금)-17일(토)',
     location: '노들섬 다목적 홀 숲',
+    ticket: '티켓구매는 7월 27일에 오픈됩니다!',
   },
   sponsors: {
     Sponsors: '후원사',

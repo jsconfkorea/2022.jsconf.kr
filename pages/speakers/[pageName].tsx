@@ -2,7 +2,7 @@ import { recordMap } from 'lib/notion'
 import { messages } from 'locales/messages'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
-export { default } from 'src/pages/NotionPage/NotionPage'
+export { default } from 'src/pages/SpeakerDetailPage'
 
 export const getStaticProps: GetStaticProps = async ({
   locale,

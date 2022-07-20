@@ -1,6 +1,6 @@
 import { DefaultSeoProps } from 'next-seo'
 
-const title = 'JSConf Korea 2022 🌈'
+export const title = 'JSConf Korea 2022 🌈'
 
 export const SEO: DefaultSeoProps = {
   titleTemplate: `%s | ${title}`,

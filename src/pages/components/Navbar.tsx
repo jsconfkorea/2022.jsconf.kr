@@ -80,14 +80,15 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li>
+          <li
+            onClick={() => {
+              ;(document.activeElement as HTMLElement)?.blur()
+            }}
+          >
             <Link
               href={{ pathname, query }}
               locale={locale === 'ko' ? 'en' : 'ko'}
               scroll={false}
-              onClick={() => {
-                ;(document.activeElement as HTMLElement)?.blur()
-              }}
             >
               <a className="justify-center p-2.5 text-lg">
                 {locale === 'ko' ? t('english') : t('korean')}

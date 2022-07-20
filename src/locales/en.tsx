@@ -16,8 +16,9 @@ export const en: typeof ko = {
     korean: '🇰🇷 한국어',
   },
   hero: {
-    date: 'Sep. 16-17th, 2022',
+    date: 'Sep. 16(Fri)-17th(Sat), 2022',
     location: 'Nodeul Island Forest Multi-Hall',
+    ticket: 'Tickets will be released on July 27th!',
   },
   sponsors: {
     Sponsors: 'Sponsors',

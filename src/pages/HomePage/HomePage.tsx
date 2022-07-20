@@ -23,7 +23,7 @@ export default function HomePage() {
             <Graphic />
 
             <div className="relative z-[40] h-screen bg-transparent text-white">
-              <div className="absolute h-full w-full bg-black opacity-50" />
+              <div className="absolute h-full w-full bg-black opacity-60" />
               <div className="container grid h-full w-full px-2 pr-6 pt-[33vh] text-right">
                 <div className="flex flex-col gap-6 justify-self-end sm:gap-12">
                   <Fade bottom duration={700}>
@@ -62,6 +62,21 @@ export default function HomePage() {
                         />
                       </div>
                     </Fade>
+                    <Fade bottom duration={700} delay={450}>
+                      <div className="flex justify-end gap-2.5 sm:gap-5">
+                        <h2 className="inline text-lg sm:text-4xl">
+                          {t('ticket')}
+                        </h2>
+                        <Image
+                          className="inline-block aspect-square self-center sm:h-8 sm:w-8"
+                          width={20}
+                          height={20}
+                          src="/ticket.png"
+                          alt="ticket-icon"
+                          priority
+                        />
+                      </div>
+                    </Fade>
                   </div>
                 </div>
               </div>
@@ -85,9 +100,6 @@ export default function HomePage() {
           </div>
 
           {/* Speakers */}
-          {/* <div className="grid h-full snap-start place-content-center bg-amber-400">
-            <h1 className="text-center text-xl text-white">프로그램</h1>
-          </div> */}
           <div className="grid min-h-screen bg-white p-28 px-6">
             <Speakers />
           </div>
