@@ -31,3 +31,11 @@ html {
     'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif !important;
 }
+
+.notion-block-368463f1db9a494991579322a4cdff1b > div {
+  aspect-ratio: 2/1 !important;
+}
+
+.notion-asset-wrapper.notion-asset-wrapper-image > div {
+  aspect-ratio: 1;
+}

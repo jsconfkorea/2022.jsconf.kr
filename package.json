@@ -34,8 +34,8 @@
     "react-reveal": "^1.2.2",
     "react-use": "^17.4.0",
     "src": "link:./src",
-    "utils": "link:./src/utils",
-    "styles": "link:./styles"
+    "styles": "link:./styles",
+    "utils": "link:./src/utils"
   },
   "devDependencies": {
     "@types/node": "^18.0.6",

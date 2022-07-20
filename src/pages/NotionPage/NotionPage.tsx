@@ -34,6 +34,7 @@ export default function NotionPage({ recordMap, pageName }: PageProps) {
                 nextImage: Image,
                 nextLink: Link,
               }}
+              forceCustomImages
             />
           </Fade>
 

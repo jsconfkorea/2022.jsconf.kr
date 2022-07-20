@@ -7,7 +7,8 @@ module.exports = {
     defaultLocale: 'ko',
   },
   images: {
-    domains: ['s3.us-west-2.amazonaws.com'],
+    domains: ['www.notion.so', 'notion.so', 's3.us-west-2.amazonaws.com'],
+    formats: ['image/avif', 'image/webp'],
   },
   experimental: {
     images: {

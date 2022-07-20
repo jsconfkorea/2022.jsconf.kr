@@ -53,6 +53,7 @@ export default function SpeakerDetailPage({ recordMap, pageName }: PageProps) {
                 nextImage: Image,
                 nextLink: Link,
               }}
+              forceCustomImages
             />
           </Fade>
 
