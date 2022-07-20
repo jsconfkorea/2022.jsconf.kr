@@ -105,7 +105,7 @@ export default function HomePage() {
           </div>
 
           {/* Sponsors */}
-          <div className="grid min-h-screen bg-white p-28 px-8">
+          <div className="grid min-h-screen bg-white p-28 px-6">
             <Sponsors />
           </div>
 

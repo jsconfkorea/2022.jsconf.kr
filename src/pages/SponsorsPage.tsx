@@ -14,7 +14,7 @@ export function SponsorsPage() {
       <div className="flex w-full flex-col">
         <Navbar />
 
-        <div className="mt-14 w-full flex-1 bg-white p-28 px-8">
+        <div className="min-h-screen w-full flex-1 bg-white p-28 px-6 pt-32">
           <Sponsors />
         </div>
 
