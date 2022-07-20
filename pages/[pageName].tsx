@@ -10,6 +10,12 @@ export const getStaticProps: GetStaticProps = async ({
 }) => {
   console.log({ locale, pageName })
 
+  if (!Object.keys(recordMap[locale]).includes(pageName as string)) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
     props: {
       messages: messages[locale],
