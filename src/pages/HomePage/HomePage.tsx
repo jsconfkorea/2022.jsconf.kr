@@ -1,6 +1,7 @@
 import Footer from 'components/Footer'
 import { Graphic } from 'components/Graphic'
 import { Navbar } from 'components/Navbar'
+import { Speakers } from 'components/Speakers'
 import { Sponsors } from 'components/Sponsors'
 import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
@@ -83,13 +84,16 @@ export default function HomePage() {
             </Fade>
           </div>
 
-          {/* Program */}
+          {/* Speakers */}
           {/* <div className="grid h-full snap-start place-content-center bg-amber-400">
             <h1 className="text-center text-xl text-white">프로그램</h1>
           </div> */}
+          <div className="grid min-h-screen bg-white p-28 px-6">
+            <Speakers />
+          </div>
 
           {/* Sponsors */}
-          <div className="grid bg-white p-24 px-8">
+          <div className="grid min-h-screen bg-white p-28 px-8">
             <Sponsors />
           </div>
 

@@ -3,7 +3,13 @@ import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const menus = ['about', 'code-of-conduct', 'sponsors', 'sponsorship']
+const menus = [
+  'about',
+  'speakers',
+  'sponsors',
+  'sponsorship',
+  'code-of-conduct',
+]
 
 export function Navbar() {
   const t = useTranslations('nav')
