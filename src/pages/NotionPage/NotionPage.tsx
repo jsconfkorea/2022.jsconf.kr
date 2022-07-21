@@ -25,7 +25,6 @@ export default function NotionPage({ recordMap, pageName }: PageProps) {
           <Fade bottom distance="1rem" duration={700}>
             <NotionRenderer
               className="!bg-white"
-              bodyClassName="!pt-32"
               recordMap={recordMap}
               fullPage
               // darkMode
