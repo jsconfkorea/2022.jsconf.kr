@@ -2,12 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^18.0.6
-  '@types/p5': ^1.4.2
   '@types/react': ^18.0.15
   '@types/react-dom': ^18.0.6
   autoprefixer: ^10.4.7
   components: link:./src/pages/components
-  daisyui: ^2.19.0
+  daisyui: ^2.19.1
   eslint: 8.20.0
   eslint-config-next: 12.2.2
   eslint-config-prettier: ^8.5.0
@@ -15,9 +14,8 @@ specifiers:
   locales: link:./src/locales
   next: ^12.2.2
   next-intl: ^2.7.4
-  next-seo: ^5.4.0
+  next-seo: ^5.5.0
   notion-client: ^6.12.11
-  p5: ^1.4.1
   pages: link:./pages
   postcss: ^8.4.14
   pretendard: ^1.3.5
@@ -36,16 +34,14 @@ specifiers:
   utils: link:./src/utils
 
 dependencies:
-  '@types/p5': 1.4.2
   components: link:src/pages/components
-  daisyui: 2.19.0_ugi4xkrfysqkt4c4y6hkyfj344
+  daisyui: 2.19.1_ugi4xkrfysqkt4c4y6hkyfj344
   lib: link:src/lib
   locales: link:src/locales
   next: 12.2.2_biqbaboplfbrettd7655fr4n2y
   next-intl: 2.7.4_next@12.2.2+react@18.2.0
-  next-seo: 5.4.0_7gpduzaz4csxytrukenoyuq3te
+  next-seo: 5.5.0_7gpduzaz4csxytrukenoyuq3te
   notion-client: 6.12.11
-  p5: 1.4.1
   pages: link:pages
   pretendard: 1.3.5
   react: 18.2.0
@@ -701,10 +697,6 @@ packages:
     resolution: {integrity: sha512-PBSFnX6IgV6Pqlx9wocUjSkGlm1I1ymz9tEiTbdNCqig6FOGiWcVUHx13TXRTBfRIhZC9+MqqgztMsgzpueaUg==}
     dev: false
 
-  /@types/p5/1.4.2:
-    resolution: {integrity: sha512-tzJ2PdmeXlX8tidbA1/pQEhs0MHVWam0K4ux5ri0GrZXhBU3QrpTpSVzNaBDuo6KheryHdH8wR82x1nPvxo42g==}
-    dev: false
-
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
@@ -1153,8 +1145,8 @@ packages:
   /csstype/3.1.0:
     resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
 
-  /daisyui/2.19.0_ugi4xkrfysqkt4c4y6hkyfj344:
-    resolution: {integrity: sha512-lLOz4cHm3xpm0AfdFojDFrhiDu4hZTdEbcVJri+KzQn1HvxmZS4STVujn8tV4RQXjchGdnIsXFqxd6F7rVZBiA==}
+  /daisyui/2.19.1_ugi4xkrfysqkt4c4y6hkyfj344:
+    resolution: {integrity: sha512-qExtDCp7N3F0Nlt7oVVehP1QMulbav8dXmEo66wavVxLVIf5tM4cV0F2Oi0OO0drzaez9v1LjBzk/vHMESs/lw==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
@@ -2328,8 +2320,8 @@ packages:
       use-intl: 2.7.4_react@18.2.0
     dev: false
 
-  /next-seo/5.4.0_7gpduzaz4csxytrukenoyuq3te:
-    resolution: {integrity: sha512-R9DhajPwJnR/lsF2hZ8cN8uqr5CVITsRrCG1AF5+ufcaybKYOvnH8sH9MaH4/hpkps3PQ9H71S7J7SPYixAYzQ==}
+  /next-seo/5.5.0_7gpduzaz4csxytrukenoyuq3te:
+    resolution: {integrity: sha512-5ouBHFtx8YrSDW44lj0qIEQ+oMcz6stgoITB+SqHUZbhgizoJsyLmq73gJ0lxtEKpcN8vG2QgRIJfdb8OAPChw==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
@@ -2566,10 +2558,6 @@ packages:
 
   /p5/1.3.1:
     resolution: {integrity: sha512-g7W2htgEwiAEGcl0WHccAJKbunUJwrUojUSR9+KihphJ33p5VpDdh1K8pDx4ppYjOr/lVEXaZ1XXDj27nwlNOg==}
-    dev: false
-
-  /p5/1.4.1:
-    resolution: {integrity: sha512-3/X+qb0bK2Cg8nuZNpZZvzxkeUSRghOf0S+l8c+U8yIkUTVSbbcV0R8y96rx3InVBVhk8cH9kFC93VlZZElqSw==}
     dev: false
 
   /parent-module/1.0.1:
