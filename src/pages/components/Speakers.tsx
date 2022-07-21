@@ -50,7 +50,7 @@ export const Speakers = () => {
                 />
                 <div className="flex flex-col gap-0.5">
                   <h3 className="text-md font-semibold leading-5 sm:text-2xl">
-                    {`"${t(`${speaker}.title`)}"`}
+                    {t(`${speaker}.title`)}
                   </h3>
                   <span className="text-sm font-medium text-slate-500 sm:text-lg">
                     {t(`${speaker}.name`)}

@@ -16,6 +16,8 @@ export function Navbar() {
   const t = useTranslations('nav')
   const { pathname, query, locale } = useRouter()
 
+  const targetLocale = locale === 'en' ? 'ko' : 'en'
+
   return (
     <nav className="navbar fixed z-50 bg-white text-black drop-shadow-md">
       <Link href="/" className="aspect-square">
@@ -37,7 +39,10 @@ export function Navbar() {
         {menus.map((menu) => (
           <li key={menu}>
             <Link href={`/${menu}`}>
-              <a className="h-full p-2.5 text-lg">{t(menu)}</a>
+              <a className="flex h-full gap-1.5 p-2.5">
+                <Image src={`/${menu}.png`} width={18} height={18} alt={menu} />
+                <span className="text-lg">{t(menu)}</span>
+              </a>
             </Link>
           </li>
         ))}
@@ -47,8 +52,16 @@ export function Navbar() {
             locale={locale === 'ko' ? 'en' : 'ko'}
             scroll={false}
           >
-            <a className="w-28 justify-center p-2.5 text-lg">
-              {locale === 'ko' ? t('english') : t('korean')}
+            <a className="flex w-28 justify-center gap-1.5 p-2.5">
+              <Image
+                src={`/${targetLocale}.png`}
+                width={18}
+                height={18}
+                alt={locale === 'ko' ? t('english') : t('korean')}
+              />
+              <span className="text-lg">
+                {locale === 'ko' ? t('english') : t('korean')}
+              </span>
             </a>
           </Link>
         </li>
@@ -77,7 +90,15 @@ export function Navbar() {
               }}
             >
               <Link href={`/${menu}`}>
-                <a className="justify-center p-2.5 text-lg">{t(menu)}</a>
+                <a className="flex justify-center gap-2 p-2.5">
+                  <Image
+                    src={`/${menu}.png`}
+                    width={20}
+                    height={20}
+                    alt={menu}
+                  />
+                  <span className="text-lg">{t(menu)}</span>
+                </a>
               </Link>
             </li>
           ))}
@@ -88,11 +109,19 @@ export function Navbar() {
           >
             <Link
               href={{ pathname, query }}
-              locale={locale === 'ko' ? 'en' : 'ko'}
+              locale={targetLocale}
               scroll={false}
             >
               <a className="justify-center p-2.5 text-lg">
-                {locale === 'ko' ? t('english') : t('korean')}
+                <Image
+                  src={`/${targetLocale}.png`}
+                  width={20}
+                  height={20}
+                  alt={locale === 'ko' ? t('english') : t('korean')}
+                />
+                <span className="text-lg">
+                  {locale === 'ko' ? t('english') : t('korean')}
+                </span>
               </a>
             </Link>
           </li>

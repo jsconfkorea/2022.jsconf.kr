@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import Image from 'next/future/image'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -11,10 +12,28 @@ export default function Footer() {
         <div className="grid w-full gap-8 self-center sm:grid-cols-2 sm:gap-x-4 sm:gap-y-16">
           <div className="flex flex-col gap-4 text-lg sm:flex-row sm:gap-8 sm:text-xl">
             <Link href="/privacy-policy">
-              <a className="text-lg hover:opacity-50">{t('privacy-policy')}</a>
+              <a className="flex gap-2 hover:opacity-50">
+                <Image
+                  className="self-center"
+                  src={`/privacy-policy.png`}
+                  width={24}
+                  height={24}
+                  alt="privacy-policy"
+                />
+                <span className="text-lg">{t('privacy-policy')}</span>
+              </a>
             </Link>
             <Link href="/code-of-conduct">
-              <a className="text-lg hover:opacity-50">{t('code-of-conduct')}</a>
+              <a className="flex gap-2 hover:opacity-50">
+                <Image
+                  className="self-center"
+                  src={`/code-of-conduct.png`}
+                  width={24}
+                  height={24}
+                  alt="code-of-conduct"
+                />
+                <span className="text-lg">{t('code-of-conduct')}</span>
+              </a>
             </Link>
           </div>
           <div className="flex gap-4 sm:justify-end">

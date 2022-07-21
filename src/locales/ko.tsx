@@ -1,17 +1,17 @@
 export const ko = {
   seo: {
-    description: `🗓 9월 16-17일 | 🏝 노들섬 다목적 홀 숲`,
+    description: `🗓 9월 16-17일 | 🏝 노들섬`,
   },
   nav: {
-    about: '💁 행사소개',
-    speakers: '🎙 발표자',
-    'code-of-conduct': '📜 핵심원칙',
-    sponsors: '✨ 후원사',
-    sponsorship: '🏅 후원사 모집',
-    scholarship: '🎓 장학제도',
-    'privacy-policy': '🔒 개인정보 처리방침',
+    about: '행사소개',
+    speakers: '발표자',
+    'code-of-conduct': '핵심원칙',
+    sponsors: '후원사',
+    sponsorship: '후원사 모집',
+    scholarship: '장학제도',
+    'privacy-policy': '개인정보 처리방침',
 
-    english: '🇬🇧 English',
+    english: 'English',
     korean: '한국어',
   },
   hero: {

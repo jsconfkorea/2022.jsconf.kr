@@ -2,19 +2,19 @@ import { ko } from './ko'
 
 export const en: typeof ko = {
   seo: {
-    description: `🗓 Sep. 16-17th | 🏝 Nodeul Island Forest Multi-Hall`,
+    description: `🗓 Sep. 16-17th | 🏝 Nodeul Island`,
   },
   nav: {
-    about: '💁 About',
-    speakers: '🎙 Speakers',
-    'code-of-conduct': '📜 Code of Conduct',
-    sponsors: '✨ Sponsors',
-    sponsorship: '🏅 Sponsorship',
-    scholarship: '🎓 Scholarship',
-    'privacy-policy': '🔒 Privacy Policy',
+    about: 'About',
+    speakers: 'Speakers',
+    'code-of-conduct': 'Code of Conduct',
+    sponsors: 'Sponsors',
+    sponsorship: 'Sponsorship',
+    scholarship: 'Scholarship',
+    'privacy-policy': 'Privacy Policy',
 
     english: 'English',
-    korean: '🇰🇷 한국어',
+    korean: '한국어',
   },
   hero: {
     date: 'Sep. 16(Fri)-17th(Sat), 2022',
