@@ -56,7 +56,7 @@ export default function Footer() {
             <a
               href="https://www.facebook.com/jsconfkorea"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="hover:opacity-50"
             >
               <svg
@@ -76,7 +76,7 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/jsconf.korea/"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="hover:opacity-50"
             >
               <svg
@@ -98,7 +98,7 @@ export default function Footer() {
             <a
               href="https://twitter.com/jsconfkorea"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="hover:opacity-50"
             >
               <svg
@@ -118,7 +118,7 @@ export default function Footer() {
             <a
               href="https://www.youtube.com/channel/UCzoVCacndDCfGDf41P-z0iA"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="hover:opacity-50"
             >
               <svg
@@ -139,7 +139,7 @@ export default function Footer() {
             <a
               href="https://github.com/jsconfkorea"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="hover:opacity-50"
             >
               <svg
@@ -161,7 +161,7 @@ export default function Footer() {
             <a
               href="https://2019.jsconfkorea.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="hover:opacity-50"
             >
               2019
@@ -169,7 +169,7 @@ export default function Footer() {
             <a
               href="https://2020.jsconf.kr/"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               className="hover:opacity-50"
             >
               2020

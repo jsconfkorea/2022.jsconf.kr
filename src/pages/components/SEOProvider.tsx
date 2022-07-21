@@ -7,7 +7,7 @@ import { isServer } from 'utils/isServer'
 
 export function SEOProvider({ children }: PropsWithChildren<{}>) {
   const t = useTranslations('seo')
-  const { asPath } = useRouter()
+  const { asPath, locale } = useRouter()
 
   return (
     <>
@@ -15,6 +15,16 @@ export function SEOProvider({ children }: PropsWithChildren<{}>) {
         {...SEO}
         description={t('description')}
         canonical={`${URL}${isServer() ? asPath : window.location.pathname}`}
+        languageAlternates={[
+          {
+            hrefLang: 'en',
+            href: `${URL}/en${asPath}`,
+          },
+          {
+            hrefLang: 'ko',
+            href: `${URL}/ko${asPath}`,
+          },
+        ]}
       />
       {children}
     </>
