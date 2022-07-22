@@ -1,8 +1,10 @@
 import Footer from 'components/Footer'
 import { Graphic } from 'components/Graphic'
 import { Navbar } from 'components/Navbar'
+import { Performs } from 'components/Performs'
 import { Speakers } from 'components/Speakers'
 import { Sponsors } from 'components/Sponsors'
+import { Workshops } from 'components/Workshops'
 import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
 import 'react-notion-x/src/styles.css'
@@ -95,16 +97,39 @@ export default function HomePage() {
                   </svg>
                 </div>
               </Fade>
+              <Fade duration={700} delay={1500}>
+                <a
+                  href="https://www.instagram.com/doodlefingers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-1 right-1 z-40 flex flex-col text-right text-[10px] text-gray-400 hover:text-gray-100 sm:bottom-2 sm:right-2 sm:text-sm"
+                >
+                  <span className="text-[9px] text-gray-500 hover:text-gray-500 sm:text-xs">
+                    interactive graphic by
+                  </span>
+                  @doodlefingers
+                </a>
+              </Fade>
             </div>
           </div>
 
           {/* Speakers */}
-          <div className="grid min-h-screen bg-white p-28 px-6">
+          <div className="grid min-h-screen bg-white p-16 px-6 pt-28">
             <Speakers />
           </div>
 
+          {/* Workshops */}
+          <div className="grid bg-white p-16 px-6">
+            <Workshops />
+          </div>
+
+          {/* Performance */}
+          <div className="grid bg-white p-16 px-6">
+            <Performs />
+          </div>
+
           {/* Sponsors */}
-          <div className="grid min-h-screen bg-white p-28 px-6">
+          <div className="grid min-h-screen bg-white p-16 px-6">
             <Sponsors />
           </div>
 

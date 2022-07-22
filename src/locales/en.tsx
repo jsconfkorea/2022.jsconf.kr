@@ -9,6 +9,7 @@ export const en: typeof ko = {
     speakers: 'Speakers',
     'code-of-conduct': 'Code of Conduct',
     sponsors: 'Sponsors',
+    workshops: 'Workshops',
     sponsorship: 'Sponsorship',
     scholarship: 'Scholarship',
     'privacy-policy': 'Privacy Policy',
@@ -86,6 +87,32 @@ export const en: typeof ko = {
     'erick-wendel': {
       name: 'Erick Wendel',
       title: `The journey about how I fixed a bug in the Node.js core that affected thousands of packages`,
+    },
+  },
+  workshops: {
+    Workshops: 'Workshops',
+    'jeongho-park': {
+      name: 'JeongHo Park',
+      title: `Making an Interactive Sound Generator with Webcam and Javascript (p5.js, tone.js)`,
+    },
+    'jiyeon-noh': {
+      name: 'Jiyeon Noh',
+      title: `What Is Data Journalism and How to Make Your Own Scroll-Based Storytelling Visualization`,
+    },
+    'subeom-choi': {
+      name: 'Subeom Choi',
+      title: `Let's Make a Deeplink Solution`,
+    },
+  },
+  performance: {
+    Performance: 'Opening & Closing Performance',
+    jeonghyo: {
+      name: 'JeongHyo',
+      link: 'https://www.instagram.com/doodlefingers/',
+    },
+    'so-sun-park': {
+      name: 'So Sun Park',
+      link: 'https://www.instagram.com/sosunnyproject/',
     },
   },
 } as const
