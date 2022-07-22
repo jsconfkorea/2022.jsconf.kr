@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 const menus = [
   'about',
   'speakers',
-  'sponsors',
+  'workshops',
   'sponsorship',
   'scholarship',
   'code-of-conduct',
@@ -67,7 +67,7 @@ export function Navbar() {
         </li>
       </ul>
 
-      <div className="dropdown-end dropdown lg:hidden">
+      <div className="dropdown dropdown-end lg:hidden">
         <label tabIndex={0} className="btn btn-ghost btn-square">
           <svg
             className="fill-current"

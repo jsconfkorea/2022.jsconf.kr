@@ -7,6 +7,7 @@ export const ko = {
     speakers: '발표자',
     'code-of-conduct': '핵심원칙',
     sponsors: '후원사',
+    workshops: '워크샵',
     sponsorship: '후원사 모집',
     scholarship: '장학제도',
     'privacy-policy': '개인정보 처리방침',
@@ -84,16 +85,30 @@ export const ko = {
       title: `수천 개의 패키지에 영향을 미친 Node.js 코어의 버그를 수정한 방법에 대한 여정`,
     },
   },
-  // workshops: {
-  //   Workshops: '워크샵',
-  //   'jungho-park': {
-  //     name: '박정호',
-  //     title: `웹캠을 이용한 자바스크립트 기반의 인터렉티브 음악 소프트웨어 만들기`,
-  //   },
-  //   'jiyeon-noh': {
-  //     name: '노지연',
-  //     title: `데이터 저널리즘!? 나만의 스크롤 스토리텔링 시각화 만들기`,
-  //   },
-  //   'Bronze Sponsor': '브론즈 등급 후원사',
-  // },
+  workshops: {
+    Workshops: '워크샵',
+    'jeongho-park': {
+      name: '박정호',
+      title: `웹캠을 이용한 자바스크립트 기반의 인터렉티브 음악 소프트웨어 만들기`,
+    },
+    'jiyeon-noh': {
+      name: '노지연',
+      title: `데이터 저널리즘!? 나만의 스크롤 스토리텔링 시각화 만들기`,
+    },
+    'subeom-choi': {
+      name: '최수범',
+      title: `딥링크 솔루션 직접 만들어보기`,
+    },
+  },
+  performance: {
+    Performance: '오프닝 및 클로징 공연',
+    jeonghyo: {
+      name: '이정효',
+      link: 'https://www.instagram.com/doodlefingers/',
+    },
+    'so-sun-park': {
+      name: '박소선',
+      link: 'https://www.instagram.com/sosunnyproject/',
+    },
+  },
 }
