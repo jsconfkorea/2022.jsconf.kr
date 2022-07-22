@@ -55,5 +55,37 @@ export const en: typeof ko = {
       title:
         'Records & Tuples are coming: the next exciting JavaScript feature',
     },
+    'chen-hui-jing': {
+      name: 'Chen Hui Jing',
+      title: 'The many flavours of enterprise CSS grid',
+    },
+    'dwane-hemmings': {
+      name: 'Dwane Hemmings',
+      title: 'React x Web Components : How It Is and How It Could Be',
+    },
+    'seok-ju-na': {
+      name: 'Seokju Na',
+      title: 'Printing Receipts with React: How to Create POS with Javascript',
+    },
+    'minsu-kim-changhui-lee': {
+      name: 'Minsu Kim, Changhui Lee',
+      title: `Is it Okay to Pursue Functional Programming on Frontend?`,
+    },
+    'anuradha-kumari': {
+      name: 'Anuradha Kumari',
+      title: `Accessibility with Svelte - beyond compiler warnings`,
+    },
+    'eleanor-rumsey': {
+      name: 'Eleanor Rumsey',
+      title: `How to Fail Successfully`,
+    },
+    'yong-wook-choi': {
+      name: 'Yongwook Choi',
+      title: `Deno: Next Generation JavaScript Runtime`,
+    },
+    'erick-wendel': {
+      name: 'Erick Wendel',
+      title: `The journey about how I fixed a bug in the Node.js core that affected thousands of packages`,
+    },
   },
 } as const

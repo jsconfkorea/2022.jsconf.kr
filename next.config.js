@@ -2,7 +2,6 @@
  * @type {import('next').NextConfig}
  */
 module.exports = {
-  reactStrictMode: true,
   staticPageGenerationTimeout: 300,
   i18n: {
     locales: ['en', 'ko'],

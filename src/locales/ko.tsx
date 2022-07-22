@@ -21,9 +21,9 @@ export const ko = {
   },
   sponsors: {
     Sponsors: '후원사',
-    'Gold Sponsor': '골드등급 후원사',
-    'Silver Sponsor': '실버등급 후원사',
-    'Bronze Sponsor': '브론즈등급 후원사',
+    'Gold Sponsor': '골드 등급 후원사',
+    'Silver Sponsor': '실버 등급 후원사',
+    'Bronze Sponsor': '브론즈 등급 후원사',
   },
   speakers: {
     Speakers: '발표자',
@@ -51,5 +51,49 @@ export const ko = {
       name: '니콜로 리바우도',
       title: '자바스크립트에 그들이 온다: 기대되는 다음 피쳐 Records 와 Tuples',
     },
+    'chen-hui-jing': {
+      name: '첸 후이 징',
+      title: '엔터프라이즈 CSS grid의 다양한 특징',
+    },
+    'dwane-hemmings': {
+      name: '드웨인 헤밍스',
+      title: 'React x Web Components : 어떻게 존재하고 어떻게 될 수 있을까',
+    },
+    'seok-ju-na': {
+      name: '나석주',
+      title: 'React로 영수증 출력해보기 (부제: 자바스크립트로 POS를 만든다고?)',
+    },
+    'minsu-kim-changhui-lee': {
+      name: '김민수, 이창희',
+      title: `프론트엔드에서 함수형을 추구하면 안되는걸까?`,
+    },
+    'anuradha-kumari': {
+      name: '아누라다 쿠마리',
+      title: `Svelte와 함께 하는 접근성 - 컴파일러 경고를 넘어서`,
+    },
+    'eleanor-rumsey': {
+      name: '엘러너 럼지',
+      title: `성공적으로 실패하는 방법`,
+    },
+    'yong-wook-choi': {
+      name: '최용욱',
+      title: `Deno: 차세대 JavaScript 런타임`,
+    },
+    'erick-wendel': {
+      name: '에릭 웬델',
+      title: `수천 개의 패키지에 영향을 미친 Node.js 코어의 버그를 수정한 방법에 대한 여정`,
+    },
   },
+  // workshops: {
+  //   Workshops: '워크샵',
+  //   'jungho-park': {
+  //     name: '박정호',
+  //     title: `웹캠을 이용한 자바스크립트 기반의 인터렉티브 음악 소프트웨어 만들기`,
+  //   },
+  //   'jiyeon-noh': {
+  //     name: '노지연',
+  //     title: `데이터 저널리즘!? 나만의 스크롤 스토리텔링 시각화 만들기`,
+  //   },
+  //   'Bronze Sponsor': '브론즈 등급 후원사',
+  // },
 }

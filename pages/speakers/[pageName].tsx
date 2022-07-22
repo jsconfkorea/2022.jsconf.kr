@@ -28,8 +28,6 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     })),
   )
 
-  console.log({ paths })
-
   return {
     paths,
     fallback: 'blocking',
@@ -44,6 +42,14 @@ export const recordMap = {
     'hung-viet-nguyen': '42ce313ad2b14a4580660e8cfd78e0f8',
     'jeong-eun-lee': '9c2c11d968f140d0a9a7fe8c376bdb6c',
     'nicol-ribaudo': '196a05f888744f859ccdcc133c245e1b',
+    'chen-hui-jing': '4a339f3e2a464983932b06aa33688e51',
+    'dwane-hemmings': 'ccc6e605a0994261a8dfc229c2979298',
+    'seok-ju-na': 'cae47e200f8144eba65d43627ed34442',
+    'minsu-kim-changhui-lee': 'f10d31c12dac46c9836aa2e9ee8fa8ff',
+    'anuradha-kumari': '57629fa79bee4f77a9826dbaff30f77e',
+    'eleanor-rumsey': '53f8aef137fe4209938903778b929703',
+    'yong-wook-choi': '82080b88bccb46be92f7f4f71a0a78c5',
+    'erick-wendel': 'a0d39c6668224379b8a21237722b9091',
   },
   en: {
     'anna-migas': '39567a37387c4bd28182eaf3b5a31153',
@@ -52,5 +58,13 @@ export const recordMap = {
     'hung-viet-nguyen': '80ee8de4e9404962aa727295045a319d',
     'jeong-eun-lee': 'b788fd35b1db46a0a5f5d78e1aac8b26',
     'nicol-ribaudo': 'c9746e9a9a6d4ef98f5da043cccd4be6',
+    'chen-hui-jing': 'bce8b72c582b4a30b7271232d591ed91',
+    'dwane-hemmings': 'b27370cae1f34afd806aacd978b567bd',
+    'seok-ju-na': 'b72514f039ff4f7698bd0f6c844db4de',
+    'minsu-kim-changhui-lee': '435c85cd65e641d293cd5af601d67dbd',
+    'anuradha-kumari': '7e2d9a771ad5481787126874e0f13bcd',
+    'eleanor-rumsey': '13a9aeb2fa1545c394447b8776889c83',
+    'yong-wook-choi': '2e953c4f52ba45cd99ce4d9a4974ba91',
+    'erick-wendel': '04d0af96cbc04b149340a239afb96434',
   },
 } as const

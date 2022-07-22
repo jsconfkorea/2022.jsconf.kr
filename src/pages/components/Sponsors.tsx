@@ -21,7 +21,7 @@ export const Sponsors = () => {
           <h2 className="text-4xl font-bold">{t('Sponsors')}</h2>
         </div>
       </Fade>
-      <Fade bottom distance="1rem" duration={500} delay={150}>
+      <Fade bottom distance="1rem" duration={500} delay={100}>
         <div className="flex flex-col gap-4 sm:gap-8">
           <h2 className="text-2xl font-semibold">{t('Gold Sponsor')}</h2>
           <Link href="https://imweb.me/">
@@ -37,7 +37,7 @@ export const Sponsors = () => {
           </Link>
         </div>
       </Fade>
-      <Fade bottom distance="1rem" duration={500} delay={300}>
+      <Fade bottom distance="1rem" duration={500} delay={200}>
         <div className="flex flex-col gap-4 sm:gap-8">
           <h2 className="text-2xl font-semibold">{t('Silver Sponsor')}</h2>
           <Link href="https://www.labnote.co/">
@@ -53,7 +53,7 @@ export const Sponsors = () => {
           </Link>
         </div>
       </Fade>
-      <Fade bottom distance="1rem" duration={700} delay={450}>
+      <Fade bottom distance="1rem" duration={700} delay={300}>
         <div className="flex flex-col gap-4 sm:gap-8">
           <h2 className="text-2xl font-semibold">{t('Bronze Sponsor')}</h2>
           <Link href="https://linepluscorp.com/">

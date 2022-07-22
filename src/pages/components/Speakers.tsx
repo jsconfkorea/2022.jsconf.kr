@@ -10,6 +10,14 @@ const speakers = [
   'hung-viet-nguyen',
   'jeong-eun-lee',
   'nicol-ribaudo',
+  'chen-hui-jing',
+  'dwane-hemmings',
+  'seok-ju-na',
+  'minsu-kim-changhui-lee',
+  'anuradha-kumari',
+  'eleanor-rumsey',
+  'yong-wook-choi',
+  'erick-wendel',
 ]
 
 export const Speakers = () => {
@@ -36,7 +44,7 @@ export const Speakers = () => {
           bottom
           distance="1rem"
           duration={500}
-          delay={(i + 1) * 100}
+          delay={(i + 1) * 50}
         >
           <Link href={`/speakers/${speaker}`}>
             <a className="self-center hover:opacity-70">
