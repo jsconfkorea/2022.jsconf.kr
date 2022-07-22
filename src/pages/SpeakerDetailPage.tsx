@@ -1,5 +1,6 @@
 import Footer from 'components/Footer'
 import { Navbar } from 'components/Navbar'
+import { URL } from 'lib/next-seo'
 import { InferGetStaticPropsType } from 'next'
 import { useTranslations } from 'next-intl'
 import { NextSeo } from 'next-seo'
@@ -28,7 +29,7 @@ export default function SpeakerDetailPage({ recordMap, pageName }: PageProps) {
           description,
           images: [
             {
-              url: `/${pageName}.thumb.png`,
+              url: `${URL}/${pageName}.thumb.png`,
               alt: title,
               type: 'image/png',
               width: 1280,
