@@ -7,7 +7,7 @@ import { isServer } from 'utils/isServer'
 
 export function SEOProvider({ children }: PropsWithChildren<{}>) {
   const t = useTranslations('seo')
-  const { asPath, locale } = useRouter()
+  const { asPath } = useRouter()
 
   return (
     <>
