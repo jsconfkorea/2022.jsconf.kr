@@ -4,6 +4,7 @@ import { Navbar } from 'components/Navbar'
 import { Performs } from 'components/Performs'
 import { Speakers } from 'components/Speakers'
 import { Sponsors } from 'components/Sponsors'
+import { Venue } from 'components/Venue'
 import { Workshops } from 'components/Workshops'
 import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
@@ -131,6 +132,11 @@ export default function HomePage() {
           {/* Sponsors */}
           <div className="grid min-h-screen bg-white p-16 px-6">
             <Sponsors />
+          </div>
+
+          {/* Venue */}
+          <div className="grid min-h-screen bg-white p-16 px-0">
+            <Venue />
           </div>
 
           <Footer />

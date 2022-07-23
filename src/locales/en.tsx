@@ -115,4 +115,10 @@ export const en: typeof ko = {
       link: 'https://www.instagram.com/sosunnyproject/',
     },
   },
+  venue: {
+    Venue: 'Venue',
+    location: 'Nodeul Island Forest Multi-Hall',
+    description:
+      'Nodeul Island an artificial island in the Han River in Seoul, South Korea. The uninhabited island is located to the east of the larger island of Yeouido. Hangang Bridge passes directly over the island.',
+  },
 } as const
