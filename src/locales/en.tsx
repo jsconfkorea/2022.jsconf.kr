@@ -66,7 +66,7 @@ export const en: typeof ko = {
     },
     'seok-ju-na': {
       name: 'Seokju Na',
-      title: 'Printing Receipts with React: How to Create POS with Javascript',
+      title: 'Printing Receipts with React: How to Create POS with JavaScript',
     },
     'minsu-kim-changhui-lee': {
       name: 'Minsu Kim, Changhui Lee',
@@ -93,7 +93,7 @@ export const en: typeof ko = {
     Workshops: 'Workshops',
     'jeongho-park': {
       name: 'JeongHo Park',
-      title: `Making an Interactive Sound Generator with Webcam and Javascript (p5.js, tone.js)`,
+      title: `Making an Interactive Sound Generator with Webcam and JavaScript (p5.js, tone.js)`,
     },
     'jiyeon-noh': {
       name: 'Jiyeon Noh',
