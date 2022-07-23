@@ -28,6 +28,11 @@ module.exports = {
         destination: '/privacy-policy',
         permanent: true,
       },
+      {
+        source: '/cfp',
+        destination: '/call-for-proposals',
+        permanent: true,
+      },
     ]
   },
 }
