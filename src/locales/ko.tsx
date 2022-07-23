@@ -111,4 +111,9 @@ export const ko = {
       link: 'https://www.instagram.com/sosunnyproject/',
     },
   },
+  venue: {
+    Venue: '장소',
+    location: '노들섬 다목적 홀 숲',
+    description: '서울이 한눈에 보이는 노들섬에서 만나요!',
+  },
 }
