@@ -1,8 +1,10 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
+import { useRouter } from 'next/router'
 import Fade from 'react-reveal/Fade'
 
 export const Venue = () => {
+  const { locale } = useRouter()
   const t = useTranslations('venue')
 
   return (
@@ -46,7 +48,23 @@ export const Venue = () => {
       </Fade>
 
       <Fade bottom distance="1rem" duration={700}>
-        <span className="px-6">{t('description')}</span>
+        <div className="flex flex-col gap-6">
+          <span className="px-6">{t('description')}</span>
+          {locale === 'en' && (
+            <span className="px-6">
+              For traveling in Seoul, checkout&nbsp;
+              <a
+                href="https://2019.jsconfkorea.com/en/seoul/"
+                className="text-blue-400 underline hover:text-blue-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                here
+              </a>
+              .
+            </span>
+          )}
+        </div>
       </Fade>
 
       <div className="grid">
