@@ -67,7 +67,10 @@ export function Navbar() {
         </li>
       </ul>
 
-      <div className="dropdown dropdown-end lg:hidden">
+      <button
+        onClick={({ currentTarget }) => currentTarget.focus()}
+        className="dropdown-end dropdown lg:hidden"
+      >
         <label tabIndex={0} className="btn btn-ghost btn-square">
           <svg
             className="fill-current"
@@ -126,7 +129,7 @@ export function Navbar() {
             </Link>
           </li>
         </ul>
-      </div>
+      </button>
     </nav>
   )
 }

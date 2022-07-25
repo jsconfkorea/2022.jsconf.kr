@@ -10,7 +10,7 @@ export const SEO: DefaultSeoProps = {
 
   openGraph: {
     type: 'website',
-    url: URL,
+    // url: URL,
     site_name: title,
     title,
     images: [

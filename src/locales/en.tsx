@@ -2,7 +2,7 @@ import { ko } from './ko'
 
 export const en: typeof ko = {
   seo: {
-    description: `🗓 Sep. 16-17th | 🏝 Nodeul Island`,
+    description: `🗓 Sep. 16-17th | 🏝 Nodeul Island Forest Multi-Hall`,
   },
   nav: {
     about: 'About',

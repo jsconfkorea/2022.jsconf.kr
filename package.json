@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "components": "link:./src/pages/components",
-    "daisyui": "^2.19.1",
+    "daisyui": "^2.20.0",
     "lib": "link:./src/lib",
     "locales": "link:./src/locales",
     "next": "^12.2.3",
@@ -36,7 +36,7 @@
     "utils": "link:./src/utils"
   },
   "devDependencies": {
-    "@types/node": "^18.0.6",
+    "@types/node": "^18.6.1",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.7",

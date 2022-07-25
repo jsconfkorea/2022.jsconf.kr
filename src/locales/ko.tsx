@@ -1,6 +1,6 @@
 export const ko = {
   seo: {
-    description: `🗓 9월 16-17일 | 🏝 노들섬`,
+    description: `🗓 9월 16-17일 | 🏝 노들섬 다목적 홀 숲`,
   },
   nav: {
     about: '행사소개',
