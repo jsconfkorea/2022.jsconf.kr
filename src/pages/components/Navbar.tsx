@@ -67,10 +67,7 @@ export function Navbar() {
         </li>
       </ul>
 
-      <button
-        onClick={({ currentTarget }) => currentTarget.focus()}
-        className="dropdown-end dropdown lg:hidden"
-      >
+      <button className="dropdown-end dropdown lg:hidden">
         <label tabIndex={0} className="btn btn-ghost btn-square">
           <svg
             className="fill-current"
