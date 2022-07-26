@@ -17,10 +17,11 @@ specifiers:
   next-seo: ^5.5.0
   notion-client: ^6.12.11
   pages: link:./pages
+  party-js: ^2.2.0
   postcss: ^8.4.14
   pretendard: ^1.3.5
   prettier: ^2.7.1
-  prettier-plugin-tailwindcss: ^0.1.12
+  prettier-plugin-tailwindcss: ^0.1.13
   react: ^18.2.0
   react-dom: ^18.2.0
   react-notion-x: ^6.12.11
@@ -43,6 +44,7 @@ dependencies:
   next-seo: 5.5.0_53oqlnqnxhbetdy4ljlkkvmoby
   notion-client: 6.12.11
   pages: link:pages
+  party-js: 2.2.0
   pretendard: 1.3.5
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -64,7 +66,7 @@ devDependencies:
   eslint-config-prettier: 8.5.0_eslint@8.20.0
   postcss: 8.4.14
   prettier: 2.7.1
-  prettier-plugin-tailwindcss: 0.1.12_prettier@2.7.1
+  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
   tailwindcss: 3.1.6
   typescript: 4.7.4
 
@@ -2567,6 +2569,10 @@ packages:
       callsites: 3.1.0
     dev: true
 
+  /party-js/2.2.0:
+    resolution: {integrity: sha512-50hGuALCpvDTrQLPQ1fgUgxKIWAH28ShVkmeK/3zhO0YJyCqkhrZhQEkWPxDYLvbFJ7YAXyROmFEu35gKpZLtQ==}
+    dev: false
+
   /path-exists/3.0.0:
     resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==}
     engines: {node: '>=4'}
@@ -2682,8 +2688,8 @@ packages:
     resolution: {integrity: sha512-psAofzXXOI9nAxNljTgTR27LDkjt9w1wzuuD2QCrlZQ4ppgdUwRbmMHZtbTNsvcLeyUn7nqYwFbeCL++QKV6iA==}
     dev: false
 
-  /prettier-plugin-tailwindcss/0.1.12_prettier@2.7.1:
-    resolution: {integrity: sha512-pEZ6tppwknCeq3ObR9g8t61AhWtVRRR3I0EQNeiRrrJ3D42FJGeUDxiFc/LJRYEeAx5JOxagsF0MICwuWOJa+w==}
+  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
+    resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       prettier: '>=2.2.0'

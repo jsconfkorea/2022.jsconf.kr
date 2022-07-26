@@ -8,8 +8,6 @@ export const getStaticProps: GetStaticProps = async ({
   locale,
   params: { pageName },
 }) => {
-  console.log({ locale, pageName })
-
   if (!Object.keys(recordMap[locale]).includes(pageName as string)) {
     return {
       notFound: true,
@@ -35,8 +33,6 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
       locale,
     })),
   )
-
-  console.log({ paths })
 
   return {
     paths,

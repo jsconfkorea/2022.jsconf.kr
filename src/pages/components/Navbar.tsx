@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 
 const menus = [
   'about',
+  'ticket',
   'speakers',
   'workshops',
   'sponsorship',

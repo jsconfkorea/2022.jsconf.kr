@@ -8,6 +8,8 @@ import { Venue } from 'components/Venue'
 import { Workshops } from 'components/Workshops'
 import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
+import Link from 'next/link'
+import { confetti, variation } from 'party-js'
 import 'react-notion-x/src/styles.css'
 import Fade from 'react-reveal/Fade'
 
@@ -65,7 +67,7 @@ export default function HomePage() {
                         />
                       </div>
                     </Fade>
-                    <Fade bottom duration={700} delay={450}>
+                    {/* <Fade bottom duration={700} delay={450}>
                       <div className="flex justify-end gap-2.5 sm:gap-5">
                         <h2 className="inline text-lg sm:text-4xl">
                           {t('ticket')}
@@ -79,10 +81,26 @@ export default function HomePage() {
                           priority
                         />
                       </div>
-                    </Fade>
+                    </Fade> */}
                   </div>
                 </div>
               </div>
+              <Fade bottom distance="1rem" duration={700} delay={450}>
+                <div className="absolute bottom-28 w-full text-center sm:container sm:top-[58%] sm:text-right">
+                  <Link href="/ticket">
+                    <a
+                      className="btn btn-primary mx-auto w-32 text-black sm:btn-lg sm:mr-6 sm:w-44"
+                      onClick={({ currentTarget }) => {
+                        confetti(currentTarget, {
+                          count: variation.range(20, 60),
+                        })
+                      }}
+                    >
+                      {t('buy-tickets')}
+                    </a>
+                  </Link>
+                </div>
+              </Fade>
               <Fade duration={700} delay={1000}>
                 <div className="absolute bottom-0 z-40 w-full">
                   <svg

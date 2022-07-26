@@ -40,3 +40,17 @@ figure.notion-block-8f632ea3044c436fb47ca7efb9dfa4cc > div {
 .notion-asset-wrapper.notion-asset-wrapper-image > div {
   aspect-ratio: 1;
 }
+
+.notion .notion-link {
+  color: #3182ce;
+  text-decoration: none;
+  border: none;
+}
+
+.notion .notion-link:hover {
+  text-decoration: underline;
+}
+
+.notion .notion-inline-underscore {
+  text-decoration: none;
+}
