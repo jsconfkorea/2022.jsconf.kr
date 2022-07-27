@@ -15,7 +15,7 @@ export const SEO: DefaultSeoProps = {
     title,
     images: [
       {
-        url: `${URL}/thumb.png`,
+        url: `/ticket_thumb.png`,
         alt: title,
         type: 'image/png',
         width: 1280,
