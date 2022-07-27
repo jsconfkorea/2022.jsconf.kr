@@ -47,25 +47,27 @@ export function Navbar() {
             </Link>
           </li>
         ))}
-        <li>
-          <Link
-            href={{ pathname, query }}
-            locale={locale === 'ko' ? 'en' : 'ko'}
-            scroll={false}
-          >
-            <a className="flex w-28 justify-center gap-1.5 p-2.5">
-              <Image
-                src={`/${targetLocale}.png`}
-                width={18}
-                height={18}
-                alt={locale === 'ko' ? t('english') : t('korean')}
-              />
-              <span className="text-lg">
-                {locale === 'ko' ? t('english') : t('korean')}
-              </span>
-            </a>
-          </Link>
-        </li>
+        {pathname !== '/budget' && (
+          <li>
+            <Link
+              href={{ pathname, query }}
+              locale={locale === 'ko' ? 'en' : 'ko'}
+              scroll={false}
+            >
+              <a className="flex w-28 justify-center gap-1.5 p-2.5">
+                <Image
+                  src={`/${targetLocale}.png`}
+                  width={18}
+                  height={18}
+                  alt={locale === 'ko' ? t('english') : t('korean')}
+                />
+                <span className="text-lg">
+                  {locale === 'ko' ? t('english') : t('korean')}
+                </span>
+              </a>
+            </Link>
+          </li>
+        )}
       </ul>
 
       <button className="dropdown-end dropdown lg:hidden">
@@ -103,29 +105,31 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li
-            onClick={() => {
-              ;(document.activeElement as HTMLElement)?.blur()
-            }}
-          >
-            <Link
-              href={{ pathname, query }}
-              locale={targetLocale}
-              scroll={false}
+          {pathname !== '/budget' && (
+            <li
+              onClick={() => {
+                ;(document.activeElement as HTMLElement)?.blur()
+              }}
             >
-              <a className="justify-center p-2.5 text-lg">
-                <Image
-                  src={`/${targetLocale}.png`}
-                  width={20}
-                  height={20}
-                  alt={locale === 'ko' ? t('english') : t('korean')}
-                />
-                <span className="text-lg">
-                  {locale === 'ko' ? t('english') : t('korean')}
-                </span>
-              </a>
-            </Link>
-          </li>
+              <Link
+                href={{ pathname, query }}
+                locale={targetLocale}
+                scroll={false}
+              >
+                <a className="justify-center p-2.5 text-lg">
+                  <Image
+                    src={`/${targetLocale}.png`}
+                    width={20}
+                    height={20}
+                    alt={locale === 'ko' ? t('english') : t('korean')}
+                  />
+                  <span className="text-lg">
+                    {locale === 'ko' ? t('english') : t('korean')}
+                  </span>
+                </a>
+              </Link>
+            </li>
+          )}
         </ul>
       </button>
     </nav>
