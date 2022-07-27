@@ -82,25 +82,25 @@ export default function HomePage() {
                         />
                       </div>
                     </Fade> */}
+                    <Fade bottom distance="1rem" duration={700} delay={450}>
+                      <div className="mt-4 w-full sm:container sm:top-[58%] sm:text-right">
+                        <Link href="/ticket">
+                          <a
+                            className="btn btn-primary mx-auto w-32 text-black sm:btn-lg sm:w-44"
+                            onClick={({ currentTarget }) => {
+                              confetti(currentTarget, {
+                                count: variation.range(20, 60),
+                              })
+                            }}
+                          >
+                            {t('buy-tickets')}
+                          </a>
+                        </Link>
+                      </div>
+                    </Fade>
                   </div>
                 </div>
               </div>
-              <Fade bottom distance="1rem" duration={700} delay={450}>
-                <div className="absolute bottom-28 w-full text-center sm:container sm:top-[58%] sm:text-right">
-                  <Link href="/ticket">
-                    <a
-                      className="btn btn-primary mx-auto w-32 text-black sm:btn-lg sm:mr-6 sm:w-44"
-                      onClick={({ currentTarget }) => {
-                        confetti(currentTarget, {
-                          count: variation.range(20, 60),
-                        })
-                      }}
-                    >
-                      {t('buy-tickets')}
-                    </a>
-                  </Link>
-                </div>
-              </Fade>
               <Fade duration={700} delay={1000}>
                 <div className="absolute bottom-0 z-40 w-full">
                   <svg

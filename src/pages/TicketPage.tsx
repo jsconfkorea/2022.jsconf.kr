@@ -78,7 +78,7 @@ export default function TicketPage({ recordMap, pageName }: PageProps) {
             </Fade>
             <Fade bottom distance="1rem" duration={700} delay={200}>
               <a
-                href="https://ti.to/jsconfkorea/jsconf-korea-2022/with/conference-ticket"
+                href="https://ti.to/jsconfkorea/jsconf-korea-2022"
                 className="btn btn-block px-2 normal-case sm:btn-lg sm:w-[420px]"
                 target="_blank"
                 rel="noopener noreferrer"
