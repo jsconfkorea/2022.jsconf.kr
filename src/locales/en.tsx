@@ -1,3 +1,4 @@
+import { ticket } from 'src/pages/TicketPage'
 import { ko } from './ko'
 
 export const en: typeof ko = {
@@ -6,6 +7,7 @@ export const en: typeof ko = {
   },
   nav: {
     about: 'About',
+    ticket: 'Tickets',
     speakers: 'Speakers',
     'code-of-conduct': 'Code of Conduct',
     sponsors: 'Sponsors',
@@ -21,6 +23,7 @@ export const en: typeof ko = {
     date: 'Sep. 16(Fri)-17th(Sat), 2022',
     location: 'Nodeul Island Forest Multi-Hall',
     ticket: 'Tickets will be released on July 27th!',
+    'buy-tickets': 'Buy Tickets',
   },
   sponsors: {
     Sponsors: 'Sponsors',
@@ -121,4 +124,5 @@ export const en: typeof ko = {
     description:
       'Nodeul Island an artificial island in the Han River in Seoul, South Korea. The uninhabited island is located to the east of the larger island of Yeouido. Hangang Bridge passes directly over the island.',
   },
+  ticket: ticket.en,
 } as const
