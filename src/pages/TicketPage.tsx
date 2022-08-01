@@ -1,4 +1,4 @@
-import Footer from 'components/Footer'
+import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import { InferGetStaticPropsType } from 'next'
 import { useTranslations } from 'next-intl'
@@ -50,7 +50,7 @@ export default function TicketPage({ recordMap, pageName }: PageProps) {
           // ],
         }}
       />
-      <div className="flex w-full flex-row">
+      <div className="flex w-full flex-row text-white">
         <Navbar />
 
         <div className="mt-16 flex w-full flex-1 flex-col gap-12 pt-16">
@@ -89,9 +89,10 @@ export default function TicketPage({ recordMap, pageName }: PageProps) {
           </div>
           <Fade bottom distance="1rem" duration={700} delay={300}>
             <NotionRenderer
-              className="!bg-white"
+              className="!bg-black"
               recordMap={recordMap}
               fullPage
+              darkMode
               disableHeader
               components={{
                 nextImage: Image,

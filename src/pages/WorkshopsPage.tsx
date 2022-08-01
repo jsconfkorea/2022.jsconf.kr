@@ -1,4 +1,4 @@
-import Footer from 'components/Footer'
+import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import { Workshops } from 'components/Workshops'
 import { useTranslations } from 'next-intl'
@@ -14,7 +14,7 @@ export function WorkshopsPage() {
       <div className="flex w-full flex-col">
         <Navbar />
 
-        <div className="min-h-screen w-full flex-1 bg-white p-28 px-6 pt-32">
+        <div className="mt-16 min-h-screen">
           <Workshops />
         </div>
 

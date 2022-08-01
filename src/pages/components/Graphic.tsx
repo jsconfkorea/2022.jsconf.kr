@@ -350,7 +350,7 @@ export const Graphic = () => {
     <>
       {typeof window !== 'undefined' && (
         <Sketch
-          className="absolute top-0 z-30 h-screen w-screen"
+          className="absolute top-0 z-20 h-screen w-screen"
           setup={setup}
           draw={draw}
           windowResized={windowResized}

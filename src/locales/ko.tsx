@@ -19,16 +19,16 @@ export const ko = {
     korean: '한국어',
   },
   hero: {
-    date: '2022년 9월 16일(금)-17일(토)',
+    date: '2022년 9월 16일(금)~17일(토)',
     location: '노들섬 다목적 홀 숲',
     ticket: '티켓구매는 7월 27일에 오픈됩니다!',
     'buy-tickets': '티켓 구매',
   },
   sponsors: {
     Sponsors: '후원사',
-    'Gold Sponsor': '골드 등급 후원사',
-    'Silver Sponsor': '실버 등급 후원사',
-    'Bronze Sponsor': '브론즈 등급 후원사',
+    gold: '골드 등급',
+    silver: '실버 등급',
+    bronze: '브론즈 등급',
   },
   speakers: {
     Speakers: '발표자',
@@ -118,6 +118,7 @@ export const ko = {
   venue: {
     Venue: '장소',
     location: '노들섬 다목적 홀 숲',
+    'google-map': '구글맵으로 보기',
     description: '서울이 한눈에 보이는 노들섬에서 만나요!',
   },
   ticket: ticket.ko,

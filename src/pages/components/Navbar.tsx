@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 const menus = [
   'about',
@@ -19,104 +20,42 @@ export function Navbar() {
 
   const targetLocale = locale === 'en' ? 'ko' : 'en'
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    document.querySelector('html').style.overflow = isOpen ? 'hidden' : 'auto'
+  }, [isOpen])
+
   return (
-    <nav className="navbar fixed z-50 bg-white text-black drop-shadow-md">
-      <Link href="/" className="aspect-square">
-        <a className="aspect-square h-full px-1">
-          <Image
-            className="rounded-md"
-            width={40}
-            height={40}
-            src="/logo.png"
-            alt="logo"
-            priority
-          />
-        </a>
-      </Link>
+    <>
+      <nav className="navbar fixed z-40 h-24 bg-gradient-to-b from-black to-transparent text-white">
+        <Link href="/">
+          <a className="m-2 h-full w-32 px-2 text-xl font-black leading-5 hover:opacity-80 sm:px-6">
+            JSConf Korea
+          </a>
+        </Link>
 
-      <div className="flex-1" />
+        <div className="flex-1" />
 
-      <ul className="menu menu-horizontal hidden gap-1 p-0 lg:flex">
-        {menus.map((menu) => (
-          <li key={menu}>
-            <Link href={`/${menu}`}>
-              <a className="flex h-full gap-1.5 p-2.5">
-                <Image src={`/${menu}.png`} width={18} height={18} alt={menu} />
-                <span className="text-lg">{t(menu)}</span>
-              </a>
-            </Link>
-          </li>
-        ))}
-        {pathname !== '/budget' && (
-          <li>
-            <Link
-              href={{ pathname, query }}
-              locale={locale === 'ko' ? 'en' : 'ko'}
-              scroll={false}
-            >
-              <a className="flex w-28 justify-center gap-1.5 p-2.5">
-                <Image
-                  src={`/${targetLocale}.png`}
-                  width={18}
-                  height={18}
-                  alt={locale === 'ko' ? t('english') : t('korean')}
-                />
-                <span className="text-lg">
-                  {locale === 'ko' ? t('english') : t('korean')}
-                </span>
-              </a>
-            </Link>
-          </li>
-        )}
-      </ul>
-
-      <button className="dropdown-end dropdown lg:hidden">
-        <label tabIndex={0} className="btn btn-ghost btn-square">
-          <svg
-            className="fill-current"
-            width="32"
-            height="32"
-            viewBox="0 0 512 512"
-          >
-            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-          </svg>
-        </label>
-        <ul
-          tabIndex={0}
-          className="dropdown-content menu rounded-box mt-4 w-[calc(100vw-16px)] bg-white p-2 shadow drop-shadow-md focus:visible"
-        >
+        {/* Desktop */}
+        <ul className="menu menu-horizontal hidden gap-0.5 p-0 lg:flex">
           {menus.map((menu) => (
-            <li
-              key={menu}
-              onClick={() => {
-                ;(document.activeElement as HTMLElement)?.blur()
-              }}
-            >
+            <li key={menu}>
               <Link href={`/${menu}`}>
-                <a className="flex justify-center gap-2 p-2.5">
-                  <Image
-                    src={`/${menu}.png`}
-                    width={20}
-                    height={20}
-                    alt={menu}
-                  />
+                <a className="flex h-full justify-center rounded-lg hover:bg-slate-600 active:bg-[#efdb4f] active:text-black">
                   <span className="text-lg">{t(menu)}</span>
                 </a>
               </Link>
             </li>
           ))}
           {pathname !== '/budget' && (
-            <li
-              onClick={() => {
-                ;(document.activeElement as HTMLElement)?.blur()
-              }}
-            >
+            <li>
               <Link
                 href={{ pathname, query }}
-                locale={targetLocale}
+                locale={locale === 'ko' ? 'en' : 'ko'}
                 scroll={false}
               >
-                <a className="justify-center p-2.5 text-lg">
+                <a className="flex w-28 justify-center gap-1.5 p-2.5 active:text-black">
                   <Image
                     src={`/${targetLocale}.png`}
                     width={20}
@@ -131,7 +70,73 @@ export function Navbar() {
             </li>
           )}
         </ul>
-      </button>
-    </nav>
+
+        {/* Mobile */}
+        <label className="swap-rotate btn swap btn-circle border-none bg-transparent hover:bg-transparent lg:hidden">
+          <input type="checkbox" onClick={() => setIsOpen((v) => !v)} />
+
+          <svg
+            className="swap-off fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+          </svg>
+
+          <svg
+            className="swap-on fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+          </svg>
+        </label>
+      </nav>
+      <ul
+        className={`menu menu-vertical fixed top-0 left-0 z-30 flex h-screen max-h-screen w-full justify-start justify-items-start bg-black py-24 text-lg text-white transition-all duration-300 lg:hidden${
+          isOpen ? ' opacity-100' : ' pointer-events-none opacity-0'
+        }`}
+      >
+        {menus.map((menu) => (
+          <li key={menu}>
+            <Link href={`/${menu}`}>
+              <a
+                className="m-2.5 mx-16 flex justify-center rounded-lg hover:bg-slate-600 active:bg-[#efdb4f] active:text-black"
+                onClick={() => setIsOpen(false)}
+              >
+                <span>{t(menu)}</span>
+              </a>
+            </Link>
+          </li>
+        ))}
+        {pathname !== '/budget' && (
+          <li
+            onClick={() => {
+              ;(document.activeElement as HTMLElement)?.blur()
+            }}
+          >
+            <Link
+              href={{ pathname, query }}
+              locale={targetLocale}
+              scroll={false}
+            >
+              <a className="m-2.5 mx-16 flex justify-center rounded-lg hover:bg-slate-600 active:bg-[#efdb4f] active:text-black">
+                <Image
+                  src={`/${targetLocale}.png`}
+                  width={20}
+                  height={20}
+                  alt={locale === 'ko' ? t('english') : t('korean')}
+                />
+                <span>{locale === 'ko' ? t('english') : t('korean')}</span>
+              </a>
+            </Link>
+          </li>
+        )}
+      </ul>
+    </>
   )
 }

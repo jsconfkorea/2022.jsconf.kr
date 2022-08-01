@@ -1,4 +1,4 @@
-import Footer from 'components/Footer'
+import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import { InferGetStaticPropsType } from 'next'
 import { useTranslations } from 'next-intl'
@@ -18,16 +18,16 @@ export default function NotionPage({ recordMap, pageName }: PageProps) {
   return (
     <>
       <NextSeo title={t(pageName)} />
-      <div className="flex w-full flex-row">
+      <div className="flex w-full flex-col">
         <Navbar />
 
-        <div className="mt-14 w-full flex-1 bg-white text-white">
+        <div className="my-20 w-full flex-1 text-white">
           <Fade bottom distance="1rem" duration={700}>
             <NotionRenderer
-              className="!bg-white"
+              className="bg-black"
               recordMap={recordMap}
               fullPage
-              // darkMode
+              darkMode
               disableHeader
               components={{
                 nextImage: Image,
@@ -36,9 +36,8 @@ export default function NotionPage({ recordMap, pageName }: PageProps) {
               forceCustomImages
             />
           </Fade>
-
-          <Footer />
         </div>
+        <Footer />
       </div>
     </>
   )

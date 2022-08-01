@@ -25,6 +25,11 @@ html {
   overflow-y: auto;
 }
 
+html,
+body {
+  background: black;
+}
+
 .notion {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
     Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
@@ -42,7 +47,7 @@ figure.notion-block-8f632ea3044c436fb47ca7efb9dfa4cc > div {
 }
 
 .notion .notion-link {
-  color: #3182ce;
+  color: rgb(96 165 250);
   text-decoration: none;
   border: none;
 }

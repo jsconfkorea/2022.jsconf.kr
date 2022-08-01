@@ -20,16 +20,16 @@ export const en: typeof ko = {
     korean: '한국어',
   },
   hero: {
-    date: 'Sep. 16(Fri)-17th(Sat), 2022',
+    date: 'Sep. 16(Fri)~17th(Sat), 2022',
     location: 'Nodeul Island Forest Multi-Hall',
     ticket: 'Tickets will be released on July 27th!',
     'buy-tickets': 'Buy Tickets',
   },
   sponsors: {
     Sponsors: 'Sponsors',
-    'Gold Sponsor': 'Gold Sponsor',
-    'Silver Sponsor': 'Silver Sponsor',
-    'Bronze Sponsor': 'Bronze Sponsor',
+    gold: 'Gold',
+    silver: 'Silver',
+    bronze: 'Bronze',
   },
   speakers: {
     Speakers: 'Speakers',
@@ -121,6 +121,7 @@ export const en: typeof ko = {
   venue: {
     Venue: 'Venue',
     location: 'Nodeul Island Forest Multi-Hall',
+    'google-map': 'Google Map',
     description:
       'Nodeul Island an artificial island in the Han River in Seoul, South Korea. The uninhabited island is located to the east of the larger island of Yeouido. Hangang Bridge passes directly over the island.',
   },

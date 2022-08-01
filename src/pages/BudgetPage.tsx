@@ -1,4 +1,4 @@
-import Footer from 'components/Footer'
+import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import { InferGetStaticPropsType } from 'next'
 import { NextSeo } from 'next-seo'
