@@ -40,7 +40,7 @@ export const Sponsors = () => {
       <div className="grid w-full max-w-xl gap-3 place-self-center sm:gap-4">
         {Object.entries(sponsors).map(([level, sponsors]) => (
           <Fade key={level} bottom distance="1rem" duration={500}>
-            <div className="grid place-content-center gap-2 rounded-lg bg-[#101010] p-5 sm:flex sm:place-content-start sm:gap-12 sm:px-12 sm:py-10">
+            <div className="grid place-content-center gap-2 rounded-lg bg-white p-5 text-black sm:flex sm:place-content-start sm:gap-12 sm:px-12 sm:py-10">
               <h3 className="text-center text-sm font-semibold sm:place-self-center sm:text-lg">
                 {t(level)}
               </h3>
