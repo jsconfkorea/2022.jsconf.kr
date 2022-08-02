@@ -60,11 +60,11 @@ export default function TicketPage({ recordMap, pageName }: PageProps) {
 
         <div className="mt-16 flex w-full flex-1 flex-col pt-16">
           <Fade bottom distance="1rem" duration={700}>
-            <div className="flex flex-col items-center justify-center gap-8 sm:gap-12">
+            <div className="flex flex-col items-center justify-center gap-8 px-8 sm:gap-12">
               <h2 className="text-4xl font-bold">{t('ticket')}</h2>
               <div className="flex flex-col items-center gap-4 text-center">
                 <span className="text-xl font-semibold">{t('sold-out')}</span>
-                <span className="text-lg">{t('thank-you')}</span>
+                <span className="break-words text-lg">{t('thank-you')}</span>
               </div>
             </div>
           </Fade>

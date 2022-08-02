@@ -106,7 +106,7 @@ export function Navbar() {
             <li key={menu} className="flex-1">
               <Link href={`/${menu}`}>
                 <a
-                  className="mx-12 flex justify-center rounded-lg p-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black"
+                  className="mx-12 flex w-60 justify-center self-center rounded-lg p-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black"
                   onClick={() => setIsOpen(false)}
                 >
                   <span>{t(menu)}</span>
@@ -121,7 +121,7 @@ export function Navbar() {
                 locale={targetLocale}
                 scroll={false}
               >
-                <a className="mx-12 flex justify-center rounded-lg px-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black">
+                <a className="mx-12 flex w-60 justify-center self-center rounded-lg px-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black">
                   <Image
                     src={`/${targetLocale}.png`}
                     width={20}

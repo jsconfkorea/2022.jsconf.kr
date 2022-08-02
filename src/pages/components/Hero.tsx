@@ -12,7 +12,7 @@ export function Hero() {
     <div className="relative bg-black">
       <Graphic />
 
-      <div className="relative z-20 h-screen bg-transparent text-white">
+      <div className="relative z-20 h-screen h-[100svh] bg-transparent text-white">
         <div className="absolute h-full w-full bg-black opacity-60" />
         <div className="grid h-full w-full place-content-center">
           <div className="grid gap-5 text-center sm:gap-8">
