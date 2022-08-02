@@ -356,6 +356,7 @@ export const Graphic = () => {
           windowResized={windowResized}
         />
       )}
+      <div className="absolute bottom-0 z-20 h-24 w-full bg-gradient-to-b from-transparent to-black"></div>
     </>
   )
 }

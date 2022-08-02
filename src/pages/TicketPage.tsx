@@ -53,7 +53,7 @@ export default function TicketPage({ recordMap, pageName }: PageProps) {
       <div className="flex w-full flex-row text-white">
         <Navbar />
 
-        <div className="mt-16 flex w-full flex-1 flex-col gap-12 pt-16">
+        <div className="mt-16 flex w-full flex-1 flex-col pt-16">
           <Fade bottom distance="1rem" duration={700}>
             <div className="flex items-center justify-center gap-2 sm:gap-4">
               <Image
@@ -65,7 +65,7 @@ export default function TicketPage({ recordMap, pageName }: PageProps) {
               <h2 className="text-4xl font-bold">{t('ticket')}</h2>
             </div>
           </Fade>
-          <div className="flex flex-col items-center justify-center gap-6 px-6">
+          <div className="mt-16 flex flex-col items-center justify-center gap-6 px-6">
             <Fade bottom distance="1rem" duration={700} delay={100}>
               <a
                 href="https://festa.io/events/e8QWVbxEybNJbJozFGgND6"
@@ -101,7 +101,6 @@ export default function TicketPage({ recordMap, pageName }: PageProps) {
               forceCustomImages
             />
           </Fade>
-
           <Footer />
         </div>
       </div>

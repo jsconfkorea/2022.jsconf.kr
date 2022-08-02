@@ -44,6 +44,14 @@ figure.notion-block-8f632ea3044c436fb47ca7efb9dfa4cc > div {
 
 .notion-asset-wrapper.notion-asset-wrapper-image > div {
   aspect-ratio: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+figure.notion-asset-wrapper.notion-block-3d33fb0dec264694b5b60bd2294aaad5 > div,
+figure.notion-asset-wrapper.notion-block-2f2a53d544d541879f5024082397d1c8
+  > div {
+  aspect-ratio: initial;
 }
 
 .notion .notion-link {

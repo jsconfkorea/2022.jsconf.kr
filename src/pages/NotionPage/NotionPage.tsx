@@ -21,7 +21,7 @@ export default function NotionPage({ recordMap, pageName }: PageProps) {
       <div className="flex w-full flex-col">
         <Navbar />
 
-        <div className="my-20 w-full flex-1 text-white">
+        <div className="mt-20 mb-0 w-full flex-1 text-white">
           <Fade bottom distance="1rem" duration={700}>
             <NotionRenderer
               className="bg-black"
@@ -37,6 +37,7 @@ export default function NotionPage({ recordMap, pageName }: PageProps) {
             />
           </Fade>
         </div>
+
         <Footer />
       </div>
     </>

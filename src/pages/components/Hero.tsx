@@ -60,7 +60,7 @@ export function Hero() {
             </svg>
           </div>
         </Fade>
-        <Fade duration={700} delay={1200}>
+        {/* <Fade duration={700} delay={1200}>
           <a
             href="https://www.instagram.com/doodlefingers/"
             target="_blank"
@@ -72,7 +72,7 @@ export function Hero() {
             </span>
             @doodlefingers
           </a>
-        </Fade>
+        </Fade> */}
       </div>
     </div>
   )

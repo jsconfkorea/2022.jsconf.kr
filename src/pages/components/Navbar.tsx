@@ -38,11 +38,11 @@ export function Navbar() {
         <div className="flex-1" />
 
         {/* Desktop */}
-        <ul className="menu menu-horizontal hidden gap-0.5 p-0 lg:flex">
+        <ul className="menu menu-horizontal hidden gap-0.5 p-0 lg:mr-2 lg:flex">
           {menus.map((menu) => (
             <li key={menu}>
               <Link href={`/${menu}`}>
-                <a className="flex h-full justify-center rounded-lg hover:bg-slate-600 active:bg-[#efdb4f] active:text-black">
+                <a className="flex h-full justify-center rounded-lg hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black">
                   <span className="text-lg">{t(menu)}</span>
                 </a>
               </Link>
@@ -55,7 +55,7 @@ export function Navbar() {
                 locale={locale === 'ko' ? 'en' : 'ko'}
                 scroll={false}
               >
-                <a className="flex w-28 justify-center gap-1.5 p-2.5 active:text-black">
+                <a className="flex w-28 justify-center gap-1.5 p-2.5 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black">
                   <Image
                     src={`/${targetLocale}.png`}
                     width={20}
@@ -96,47 +96,45 @@ export function Navbar() {
           </svg>
         </label>
       </nav>
-      <ul
-        className={`menu menu-vertical fixed top-0 left-0 z-30 flex h-screen max-h-screen w-full justify-start justify-items-start bg-black py-24 text-lg text-white transition-all duration-300 lg:hidden${
-          isOpen ? ' opacity-100' : ' pointer-events-none opacity-0'
-        }`}
-      >
-        {menus.map((menu) => (
-          <li key={menu}>
-            <Link href={`/${menu}`}>
-              <a
-                className="m-2.5 mx-16 flex justify-center rounded-lg hover:bg-slate-600 active:bg-[#efdb4f] active:text-black"
-                onClick={() => setIsOpen(false)}
+      <div className="">
+        <ul
+          className={`menu menu-vertical fixed top-0 left-0 z-30 flex h-screen max-h-screen w-full justify-start justify-items-start bg-black py-24 text-lg text-white transition-opacity duration-300 lg:hidden${
+            isOpen ? ' opacity-100' : ' pointer-events-none opacity-0'
+          }`}
+        >
+          {menus.map((menu) => (
+            <li key={menu} className="flex-1">
+              <Link href={`/${menu}`}>
+                <a
+                  className="mx-12 flex justify-center rounded-lg p-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <span>{t(menu)}</span>
+                </a>
+              </Link>
+            </li>
+          ))}
+          {pathname !== '/budget' && (
+            <li className="flex-1" onClick={() => setIsOpen(false)}>
+              <Link
+                href={{ pathname, query }}
+                locale={targetLocale}
+                scroll={false}
               >
-                <span>{t(menu)}</span>
-              </a>
-            </Link>
-          </li>
-        ))}
-        {pathname !== '/budget' && (
-          <li
-            onClick={() => {
-              ;(document.activeElement as HTMLElement)?.blur()
-            }}
-          >
-            <Link
-              href={{ pathname, query }}
-              locale={targetLocale}
-              scroll={false}
-            >
-              <a className="m-2.5 mx-16 flex justify-center rounded-lg hover:bg-slate-600 active:bg-[#efdb4f] active:text-black">
-                <Image
-                  src={`/${targetLocale}.png`}
-                  width={20}
-                  height={20}
-                  alt={locale === 'ko' ? t('english') : t('korean')}
-                />
-                <span>{locale === 'ko' ? t('english') : t('korean')}</span>
-              </a>
-            </Link>
-          </li>
-        )}
-      </ul>
+                <a className="mx-12 flex justify-center rounded-lg px-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black">
+                  <Image
+                    src={`/${targetLocale}.png`}
+                    width={20}
+                    height={20}
+                    alt={locale === 'ko' ? t('english') : t('korean')}
+                  />
+                  <span>{locale === 'ko' ? t('english') : t('korean')}</span>
+                </a>
+              </Link>
+            </li>
+          )}
+        </ul>
+      </div>
     </>
   )
 }

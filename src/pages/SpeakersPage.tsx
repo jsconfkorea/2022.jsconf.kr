@@ -14,7 +14,7 @@ export function SpeakersPage() {
       <div className="flex w-full flex-col">
         <Navbar />
 
-        <div className="my-16 min-h-screen flex-1">
+        <div className="mt-16 min-h-screen flex-1">
           <Speakers />
         </div>
 

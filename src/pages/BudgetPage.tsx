@@ -20,10 +20,10 @@ export default function BudgetPage({ recordMap }: PageProps) {
       <div className="flex w-full flex-row">
         <Navbar />
 
-        <div className="mt-16 w-full flex-1 bg-white text-white">
+        <div className="mt-16 w-full flex-1">
           <Fade bottom distance="1rem" duration={700}>
             <NotionRenderer
-              className="!bg-white"
+              className="bg-black text-white"
               recordMap={recordMap}
               fullPage
               disableHeader

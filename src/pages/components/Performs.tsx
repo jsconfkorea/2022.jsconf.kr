@@ -26,7 +26,7 @@ export const Performs = () => {
                   src={`/${perform}.profile.png`}
                   alt={t(`${perform}.name`)}
                 />
-                <span className="text-xs text-slate-400 sm:text-sm">
+                <span className="text-center text-xs text-slate-400 sm:text-sm">
                   {t(`${perform}.name`)}
                 </span>
               </a>
