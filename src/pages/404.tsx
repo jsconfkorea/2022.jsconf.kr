@@ -9,7 +9,7 @@ export function NotFoundPage() {
       <div className="flex min-h-screen w-full flex-col">
         <Navbar />
 
-        <div className="flex w-full flex-1 bg-white">
+        <div className="flex w-full flex-1 bg-black text-white">
           <div className="grid w-full flex-1 justify-center place-self-center">
             <h1 className="text-9xl font-black">404</h1>
           </div>
