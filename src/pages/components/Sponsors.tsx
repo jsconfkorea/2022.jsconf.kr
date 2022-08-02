@@ -50,7 +50,7 @@ export const Sponsors = () => {
                 {sponsors.map(({ name, link }) => (
                   <Link key={name} href={link}>
                     <a
-                      className="opacity-80 grayscale hover:opacity-100 hover:grayscale-0 sm:place-self-center"
+                      className="hover:opacity-80 sm:place-self-center"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
