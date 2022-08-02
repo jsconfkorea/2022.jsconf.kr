@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const menus = [
   'about',
@@ -21,6 +21,9 @@ export function Navbar() {
   const targetLocale = locale === 'en' ? 'ko' : 'en'
 
   const [isOpen, setIsOpen] = useState(false)
+  const ref = useRef<HTMLInputElement>(null)
+  // const isOpen = !!ref.current?.checked
+  // const setIsOpen = (v: boolean) => (ref.current.checked = v)
 
   useEffect(() => {
     document.querySelector('html').style.overflow = isOpen ? 'hidden' : 'auto'
@@ -73,7 +76,11 @@ export function Navbar() {
 
         {/* Mobile */}
         <label className="swap-rotate btn swap btn-circle border-none bg-transparent hover:bg-transparent lg:hidden">
-          <input type="checkbox" onClick={() => setIsOpen((v) => !v)} />
+          <input
+            ref={ref}
+            type="checkbox"
+            onChange={({ currentTarget }) => setIsOpen(currentTarget.checked)}
+          />
 
           <svg
             className="swap-off fill-current"
@@ -98,16 +105,19 @@ export function Navbar() {
       </nav>
       <div className="">
         <ul
-          className={`menu menu-vertical fixed top-0 left-0 z-30 flex h-screen max-h-screen w-full justify-start justify-items-start bg-black py-24 text-lg text-white transition-opacity duration-300 lg:hidden${
+          className={`menu menu-vertical fixed top-0 left-0 z-30 flex h-screen h-[100svh] max-h-screen w-full justify-start justify-items-start bg-black pt-[88px] pb-12 text-lg text-white transition-opacity duration-300 lg:hidden${
             isOpen ? ' opacity-100' : ' pointer-events-none opacity-0'
           }`}
         >
           {menus.map((menu) => (
-            <li key={menu} className="flex-1">
+            <li key={menu} className="flex-1 self-center">
               <Link href={`/${menu}`}>
                 <a
-                  className="mx-12 flex w-60 justify-center self-center rounded-lg p-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black"
-                  onClick={() => setIsOpen(false)}
+                  className="mx-12 flex h-[44px] min-w-[256px] max-w-xs justify-center self-center rounded-lg p-2 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black"
+                  onClick={() => {
+                    ref.current.checked = false
+                    setIsOpen(false)
+                  }}
                 >
                   <span>{t(menu)}</span>
                 </a>
@@ -115,13 +125,19 @@ export function Navbar() {
             </li>
           ))}
           {pathname !== '/budget' && (
-            <li className="flex-1" onClick={() => setIsOpen(false)}>
+            <li className="flex-1 self-center">
               <Link
                 href={{ pathname, query }}
                 locale={targetLocale}
                 scroll={false}
               >
-                <a className="mx-12 flex w-60 justify-center self-center rounded-lg px-3 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black">
+                <a
+                  onClick={() => {
+                    ref.current.checked = false
+                    setIsOpen(false)
+                  }}
+                  className="mx-12 flex h-[44px] min-w-[256px] max-w-xs justify-center self-center rounded-lg px-2 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black"
+                >
                   <Image
                     src={`/${targetLocale}.png`}
                     width={20}
