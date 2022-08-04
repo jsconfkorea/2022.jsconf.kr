@@ -1,3 +1,4 @@
+import { program } from 'src/pages/ProgramPage'
 import { ticket } from 'src/pages/TicketPage'
 
 export const ko = {
@@ -122,4 +123,5 @@ export const ko = {
     description: '서울이 한눈에 보이는 노들섬에서 만나요!',
   },
   ticket: ticket.ko,
+  program: program.ko,
 }

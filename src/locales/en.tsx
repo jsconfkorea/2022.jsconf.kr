@@ -1,3 +1,4 @@
+import { program } from 'src/pages/ProgramPage'
 import { ticket } from 'src/pages/TicketPage'
 import { ko } from './ko'
 
@@ -126,4 +127,5 @@ export const en: typeof ko = {
       'Nodeul Island an artificial island in the Han River in Seoul, South Korea. The uninhabited island is located to the east of the larger island of Yeouido. Hangang Bridge passes directly over the island.',
   },
   ticket: ticket.en,
+  program: program.en,
 } as const
