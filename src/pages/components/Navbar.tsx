@@ -10,7 +10,7 @@ const menus = [
   'speakers',
   'workshops',
   'sponsorship',
-  'scholarship',
+  // 'scholarship',
   'code-of-conduct',
 ]
 
@@ -22,8 +22,6 @@ export function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false)
   const ref = useRef<HTMLInputElement>(null)
-  // const isOpen = !!ref.current?.checked
-  // const setIsOpen = (v: boolean) => (ref.current.checked = v)
 
   useEffect(() => {
     document.querySelector('html').style.overflow = isOpen ? 'hidden' : 'auto'

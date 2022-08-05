@@ -75,12 +75,21 @@ export function Footer() {
         </div>
 
         {/* Links */}
-        <div className="flex gap-4 place-self-center sm:order-1 sm:justify-self-start">
+        <div className="flex flex-wrap gap-4 gap-y-2 place-self-center sm:order-1 sm:justify-self-start">
           <Link href="/code-of-conduct">
-            <a className="text-sm hover:opacity-80">{t('code-of-conduct')}</a>
+            <a className="grow text-center text-sm hover:opacity-80">
+              {t('code-of-conduct')}
+            </a>
           </Link>
           <Link href="/privacy-policy">
-            <a className="text-sm hover:opacity-80">{t('privacy-policy')}</a>
+            <a className="grow text-center text-sm hover:opacity-80">
+              {t('privacy-policy')}
+            </a>
+          </Link>
+          <Link href="/scholarship">
+            <a className="grow text-center text-sm hover:opacity-80">
+              {t('scholarship')}
+            </a>
           </Link>
         </div>
 
