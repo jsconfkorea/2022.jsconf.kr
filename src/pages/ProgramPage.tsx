@@ -551,34 +551,19 @@ export function ProgramPage() {
                     </a>
                   </Link>
 
-                  <Link href="#">
-                    <a
-                      className={`${
-                        room === 'M' ? 'flex' : 'hidden'
-                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-4 lg:!flex lg:min-h-[164px] lg:gap-3`}
-                    >
-                      <div className="flex justify-between text-sm opacity-70">
-                        <span className="">17:30 - 20:00</span>
-                        <span className="">150{t('m')}</span>
-                      </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
-                          {t('after-party')}
-                        </span>
-                      </div>
-                      {/* <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/jeremy-wagner.png"
-                        />
-                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          {s('jeremy-wagner.name')}
-                        </span>
-                      </div> */}
-                    </a>
-                  </Link>
+                  <div
+                    className={`${
+                      room === 'M' ? 'flex' : 'hidden'
+                    } group min-h-[300px] flex-col gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-2 lg:row-span-4 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                  >
+                    <div className="flex justify-between text-sm opacity-70">
+                      <span className="">17:30 - 20:00</span>
+                      <span className="">150{t('m')}</span>
+                    </div>
+                    <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <span className="font-semibold">{t('after-party')}</span>
+                    </div>
+                  </div>
 
                   <Link href="#">
                     <a
