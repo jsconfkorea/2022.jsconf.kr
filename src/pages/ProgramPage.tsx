@@ -9,14 +9,45 @@ import { useRouter } from 'next/router'
 export const program = {
   ko: {
     program: '프로그램',
+    fri: '금',
+    sat: '토',
+    'multi-hall': '다목적 홀',
+    room: '세미나실',
+    registration: '참가자등록',
+    opening: '오프닝 및 오프닝 공연',
+    m: '분',
+    lunch: '점심시간',
+    workshop: '워크샵',
+    break: '쉬는시간',
+    networking: '네트워킹 & 휴식공간',
+    'after-party': '애프터 파티, 공연',
+    'sponsor-session': '스폰서 세션',
+    closing: '클로징 & 단체사진',
   },
   en: {
     program: 'Program',
+    fri: 'FRI',
+    sat: 'SAT',
+    'multi-hall': 'Multi-hall',
+    room: 'Room',
+    registration: 'Registration',
+    opening: 'Opening & Performance',
+    m: 'm',
+    lunch: 'Lunch',
+    workshop: 'Workshop',
+    break: 'Break',
+    networking: 'Networking Lounge',
+    'after-party': 'After party, Performance',
+    'sponsor-session': 'Sponsor session',
+    closing: 'Closing & Group Photo',
   },
 }
 
 export function ProgramPage() {
   const t = useTranslations('program')
+  const s = useTranslations('speakers')
+  const w = useTranslations('workshops')
+
   const { query, replace } = useRouter()
 
   const day = ['1', '2'].includes(query.day as string)
@@ -33,7 +64,7 @@ export function ProgramPage() {
       <div className="flex min-h-screen w-full flex-col">
         <Navbar />
 
-        <div className="mt mt-44 flex w-full flex-1 bg-black text-white">
+        <div className="mt my-44 flex w-full flex-1 bg-black text-white">
           <div className="container flex flex-col justify-center">
             <h1 className="text-center text-4xl font-bold">{t('program')}</h1>
 
@@ -53,7 +84,7 @@ export function ProgramPage() {
                   })
                 }
               >
-                2022.9.16 금
+                2022.9.16 {t('fri')}
               </button>
               <button
                 className={`z-10 flex h-full items-center justify-center rounded-full ${
@@ -65,14 +96,14 @@ export function ProgramPage() {
                   })
                 }
               >
-                2022.9.17 토
+                2022.9.17 {t('sat')}
               </button>
             </div>
 
             <div className="relative mt-16 grid max-w-4xl grid-cols-3 gap-5 place-self-center lg:w-full lg:grid-cols-4 lg:px-5">
               <button
                 className={`${
-                  room === 'M' ? 'underline opacity-100' : ''
+                  room === 'M' ? 'underline !opacity-100' : ''
                 } underline-offset-8 opacity-60 lg:col-span-2 lg:text-white lg:no-underline lg:opacity-100`}
                 onClick={() =>
                   replace({ query: { ...query, room: 'M' } }, undefined, {
@@ -80,11 +111,11 @@ export function ProgramPage() {
                   })
                 }
               >
-                다목적 홀 숲
+                {t('multi-hall')}
               </button>
               <button
                 className={`${
-                  room === 'A' ? 'underline opacity-100' : ''
+                  room === 'A' ? 'underline !opacity-100' : ''
                 } underline-offset-8 opacity-60 lg:text-white lg:no-underline lg:opacity-100`}
                 onClick={() =>
                   replace({ query: { ...query, room: 'A' } }, undefined, {
@@ -92,11 +123,11 @@ export function ProgramPage() {
                   })
                 }
               >
-                세미나실 A
+                {t('room')} A
               </button>
               <button
                 className={`${
-                  room === 'C' ? 'underline opacity-100' : ''
+                  room === 'C' ? 'underline !opacity-100' : ''
                 } underline-offset-8 opacity-60 lg:text-white lg:no-underline lg:opacity-100`}
                 onClick={() =>
                   replace({ query: { ...query, room: 'C' } }, undefined, {
@@ -104,52 +135,53 @@ export function ProgramPage() {
                   })
                 }
               >
-                세미나실 C
+                {t('room')} C
               </button>
             </div>
 
             <div className="mt-8 grid w-full max-w-4xl grid-cols-1 gap-5 self-center px-5 lg:grid-cols-4 lg:gap-x-8">
-              <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
-                <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
-                  <span className="opacity-70">10:30 - 11:00</span>
-                  <span className="justify-self-end opacity-70 lg:order-3">
-                    30분
-                  </span>
-                  <span className="font-semibold opacity-100 lg:justify-self-center">
-                    참가자등록
-                  </span>
-                </div>
-              </div>
-
-              <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
-                <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
-                  <span className="opacity-70">11:00 - 11:30</span>
-                  <span className="justify-self-end opacity-70 lg:order-3">
-                    30분
-                  </span>
-                  <span className="font-semibold opacity-100 lg:justify-self-center">
-                    오프닝 및 오프닝 공연
-                  </span>
-                </div>
-              </div>
-
               {day === '1' && (
                 <>
-                  <Link href="/">
+                  <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
+                    <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
+                      <span className="opacity-70">10:30 - 11:00</span>
+                      <span className="justify-self-end opacity-70 lg:order-3">
+                        30{t('m')}
+                      </span>
+                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                        {t('registration')}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
+                    <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
+                      <span className="opacity-70">11:00 - 11:30</span>
+                      <span className="justify-self-end opacity-70 lg:order-3">
+                        30{t('m')}
+                      </span>
+                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                        {t('opening')}
+                      </span>
+                    </div>
+                  </div>
+
+                  <Link href="/speakers/anna-migas">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 11:55</span>
-                        <span className="">25분</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('anna-migas.title')}
                         </span>
                       </div>
+                      <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
                           className="rounded-full grayscale group-hover:grayscale-0"
@@ -158,52 +190,72 @@ export function ProgramPage() {
                           src="/anna-migas.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('anna-migas.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="#">
                     <a
                       className={`${
                         room === 'A' ? 'flex' : 'hidden'
-                      } group min-h-[436px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 13:00</span>
-                        <span className="">90분</span>
+                        <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">워크샵</span>
+                        <span className="font-semibold">{t('workshop')}</span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/anna-migas.png"
-                        />
+                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          TBA
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="#">
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group min-h-[436px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 13:00</span>
-                        <span className="">90분</span>
+                        <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">워크샵</span>
+                        <span className="font-semibold">{t('workshop')}</span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          TBA
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="/speakers/minsu-kim-changhui-lee">
+                    <a
+                      className={`${
+                        room === 'M' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">12:00 - 12:25</span>
+                        <span className="">25{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {s('minsu-kim-changhui-lee.title')}
+                        </span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -211,68 +263,40 @@ export function ProgramPage() {
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/minsu-kim-changhui-lee.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('minsu-kim-changhui-lee.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="/speakers/anuradha-kumari">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
-                    >
-                      <div className="flex justify-between text-sm opacity-70">
-                        <span className="">12:00 - 12:25</span>
-                        <span className="">25분</span>
-                      </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
-                        </span>
-                      </div>
-                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/anna-migas.png"
-                        />
-                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
-                        </span>
-                      </div>
-                    </a>
-                  </Link>
-
-                  <Link href="/">
-                    <a
-                      className={`${
-                        room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">12:30 - 12:55</span>
-                        <span className="">25분</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('anuradha-kumari.title')}
                         </span>
                       </div>
+                      <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/anuradha-kumari.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('anuradha-kumari.name')}
                         </span>
                       </div>
                     </a>
@@ -282,83 +306,104 @@ export function ProgramPage() {
                     <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
                       <span className="opacity-70">13:00 - 14:30</span>
                       <span className="justify-self-end opacity-70 lg:order-3">
-                        90분
+                        90{t('m')}
                       </span>
                       <span className="font-semibold opacity-100 lg:justify-self-center">
-                        점심시간
+                        {t('lunch')}
                       </span>
                     </div>
                   </div>
 
-                  <Link href="/">
+                  <Link href="/speakers/eleanor-rumsey">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">14:30 - 14:55</span>
-                        <span className="">25분</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('eleanor-rumsey.title')}
                         </span>
                       </div>
+                      <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/eleanor-rumsey.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('eleanor-rumsey.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="#">
                     <a
                       className={`${
                         room === 'A' ? 'flex' : 'hidden'
-                      } group min-h-[436px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">11:30 - 13:00</span>
-                        <span className="">90분</span>
+                        <span className="">14:30 - 16:00</span>
+                        <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">워크샵</span>
+                        <span className="font-semibold">{t('workshop')}</span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/anna-migas.png"
-                        />
+                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          TBA
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="#">
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group min-h-[436px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">11:30 - 13:00</span>
-                        <span className="">90분</span>
+                        <span className="">14:30 - 16:00</span>
+                        <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">워크샵</span>
+                        <span className="font-semibold">{t('workshop')}</span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          TBA
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="/speakers/dwane-hemmings">
+                    <a
+                      className={`${
+                        room === 'M' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">15:00 - 15:25</span>
+                        <span className="">25{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {s('dwane-hemmings.title')}
+                        </span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -366,114 +411,73 @@ export function ProgramPage() {
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/dwane-hemmings.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('dwane-hemmings.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <div
+                    className={`${
+                      room === 'M' ? 'flex' : 'hidden'
+                    } grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-2 lg:!flex`}
+                  >
+                    <div className="grid w-full grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
+                      <span className="opacity-70">15:30 - 16:00</span>
+                      <span className="justify-self-end opacity-70 lg:order-3">
+                        30{t('m')}
+                      </span>
+                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                        {t('break')}
+                      </span>
+                    </div>
+                  </div>
+
+                  <Link href="/speakers/jeong-eun-lee">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">14:30 - 14:55</span>
-                        <span className="">25분</span>
+                        <span className="">16:00 - 16:25</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('jeong-eun-lee.title')}
                         </span>
                       </div>
+                      <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/jeong-eun-lee.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('jeong-eun-lee.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="#">
                     <a
                       className={`${
-                        room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                        room !== 'M' ? 'flex' : 'hidden'
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-3 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">14:30 - 14:55</span>
-                        <span className="">25분</span>
+                        <span className="">16:00 - 17:30</span>
+                        <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
-                        </span>
-                      </div>
-                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/anna-migas.png"
-                        />
-                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
-                        </span>
-                      </div>
-                    </a>
-                  </Link>
-
-                  <Link href="/">
-                    <a
-                      className={`${
-                        room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
-                    >
-                      <div className="flex justify-between text-sm opacity-70">
-                        <span className="">14:30 - 14:55</span>
-                        <span className="">25분</span>
-                      </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
-                        </span>
-                      </div>
-                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/anna-migas.png"
-                        />
-                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
-                        </span>
-                      </div>
-                    </a>
-                  </Link>
-
-                  <Link href="/">
-                    <a
-                      className={`${
-                        room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-3 lg:!flex lg:gap-3`}
-                    >
-                      <div className="flex justify-between text-sm opacity-70">
-                        <span className="">14:30 - 14:55</span>
-                        <span className="">25분</span>
-                      </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">네트워킹</span>
+                        <span className="font-semibold">{t('networking')}</span>
                       </div>
                       {/* <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
@@ -489,19 +493,19 @@ export function ProgramPage() {
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="/speakers/hung-viet-nguyen">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">14:30 - 14:55</span>
-                        <span className="">25분</span>
+                        <span className="">16:30 - 16:55</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('hung-viet-nguyen.title')}
                         </span>
                       </div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -509,28 +513,28 @@ export function ProgramPage() {
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/hung-viet-nguyen.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('hung-viet-nguyen.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="/speakers/jeremy-wagner">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">14:30 - 14:55</span>
-                        <span className="">25분</span>
+                        <span className="">17:00 - 17:25</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('jeremy-wagner.title')}
                         </span>
                       </div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -538,10 +542,134 @@ export function ProgramPage() {
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/jeremy-wagner.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('jeremy-wagner.name')}
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room === 'M' ? 'flex' : 'hidden'
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-4 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">17:30 - 20:00</span>
+                        <span className="">150{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {t('after-party')}
+                        </span>
+                      </div>
+                      {/* <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <Image
+                          className="rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/jeremy-wagner.png"
+                        />
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          {s('jeremy-wagner.name')}
+                        </span>
+                      </div> */}
+                    </a>
+                  </Link>
+
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room === 'A' ? 'flex' : 'hidden'
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-4 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">17:30 - 19:00</span>
+                        <span className="">90{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">{t('workshop')}</span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          TBA
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room === 'C' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">17:30 - 17:50</span>
+                        <span className="">20{t('m')}</span>
+                      </div>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {t('sponsor-session')}
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room === 'C' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">17:50 - 18:10</span>
+                        <span className="">20{t('m')}</span>
+                      </div>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {t('sponsor-session')}
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room === 'C' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">18:10 - 18:30</span>
+                        <span className="">20{t('m')}</span>
+                      </div>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {t('sponsor-session')}
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room === 'C' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">18:30 - 18:50</span>
+                        <span className="">20{t('m')}</span>
+                      </div>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {t('sponsor-session')}
                         </span>
                       </div>
                     </a>
@@ -551,75 +679,158 @@ export function ProgramPage() {
 
               {day === '2' && (
                 <>
-                  <Link href="/">
+                  <Link href="/speakers/chen-hui-jing">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">11:30 - 11:55</span>
-                        <span className="">25분</span>
+                        <span className="">10:30 - 10:55</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('chen-hui-jing.title')}
                         </span>
                       </div>
+                      <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/chen-hui-jing.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('chen-hui-jing.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room !== 'M' ? 'flex' : 'hidden'
+                      } group min-h-[200px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-2 lg:!flex lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">10:30 - 11:30</span>
+                        <span className="">60{t('m')}</span>
+                      </div>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">{t('networking')}</span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="/speakers/jong-chan-choi">
+                    <a
+                      className={`${
+                        room === 'M' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">11:00 - 11:25</span>
+                        <span className="">25{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {s('jong-chan-choi.title')}
+                        </span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <Image
+                          className="rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/jong-chan-choi.png"
+                        />
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          {s('jong-chan-choi.name')}
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <div
+                    className={`${
+                      room === 'M' ? 'flex' : 'hidden'
+                    } grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-2 lg:!flex`}
+                  >
+                    <div className="grid w-full grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
+                      <span className="opacity-70">11:30 - 12:00</span>
+                      <span className="justify-self-end opacity-70 lg:order-3">
+                        30{t('m')}
+                      </span>
+                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                        {t('break')}
+                      </span>
+                    </div>
+                  </div>
+
+                  <Link href="#">
                     <a
                       className={`${
                         room === 'A' ? 'flex' : 'hidden'
-                      } group min-h-[436px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 13:00</span>
-                        <span className="">90분</span>
+                        <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">워크샵</span>
+                        <span className="font-semibold">{t('workshop')}</span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/anna-migas.png"
-                        />
+                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          TBA
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="#">
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group min-h-[436px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 13:00</span>
-                        <span className="">90분</span>
+                        <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">워크샵</span>
+                        <span className="font-semibold">{t('workshop')}</span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          TBA
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="/speakers/seok-ju-na">
+                    <a
+                      className={`${
+                        room === 'M' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">12:00 - 12:25</span>
+                        <span className="">25{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {s('seok-ju-na.title')}
+                        </span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -627,68 +838,40 @@ export function ProgramPage() {
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/seok-ju-na.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('seok-ju-na.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
 
-                  <Link href="/">
+                  <Link href="/speakers/nicol-ribaudo">
                     <a
                       className={`${
                         room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
-                    >
-                      <div className="flex justify-between text-sm opacity-70">
-                        <span className="">12:00 - 12:25</span>
-                        <span className="">25분</span>
-                      </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
-                        </span>
-                      </div>
-                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <Image
-                          className="rounded-full grayscale group-hover:grayscale-0"
-                          width={24}
-                          height={24}
-                          src="/anna-migas.png"
-                        />
-                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
-                        </span>
-                      </div>
-                    </a>
-                  </Link>
-
-                  <Link href="/">
-                    <a
-                      className={`${
-                        room === 'M' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:gap-3`}
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">12:30 - 12:55</span>
-                        <span className="">25분</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('nicol-ribaudo.title')}
                         </span>
                       </div>
+                      <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/nicol-ribaudo.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('nicol-ribaudo.name')}
                         </span>
                       </div>
                     </a>
@@ -698,38 +881,101 @@ export function ProgramPage() {
                     <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
                       <span className="opacity-70">13:00 - 14:30</span>
                       <span className="justify-self-end opacity-70 lg:order-3">
-                        90분
+                        90{t('m')}
                       </span>
                       <span className="font-semibold opacity-100 lg:justify-self-center">
-                        점심시간
+                        {t('lunch')}
                       </span>
                     </div>
                   </div>
 
-                  <Link href="/">
-                    <a className="group grid gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white">
+                  <Link href="/speakers/yong-wook-choi">
+                    <a
+                      className={`${
+                        room === 'M' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">11:30 - 11:50</span>
-                        <span className="">20분</span>
+                        <span className="">14:30 - 14:55</span>
+                        <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          아무도 이야기 하지 않는 웹 성능 지표의 비밀
+                          {s('yong-wook-choi.title')}
                         </span>
                       </div>
+                      <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
                           className="rounded-full grayscale group-hover:grayscale-0"
                           width={24}
                           height={24}
-                          src="/anna-migas.png"
+                          src="/yong-wook-choi.png"
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          안나미가스
+                          {s('yong-wook-choi.name')}
                         </span>
                       </div>
                     </a>
                   </Link>
+
+                  <Link href="#">
+                    <a
+                      className={`${
+                        room !== 'M' ? 'flex' : 'hidden'
+                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">14:30 - 15:30</span>
+                        <span className="">60{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">{t('networking')}</span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <Link href="/speakers/erick-wendel">
+                    <a
+                      className={`${
+                        room === 'M' ? 'flex' : 'hidden'
+                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                    >
+                      <div className="flex justify-between text-sm opacity-70">
+                        <span className="">15:00 - 15:25</span>
+                        <span className="">25{t('m')}</span>
+                      </div>
+                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {s('erick-wendel.title')}
+                        </span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <Image
+                          className="rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/erick-wendel.png"
+                        />
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          {s('erick-wendel.name')}
+                        </span>
+                      </div>
+                    </a>
+                  </Link>
+
+                  <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
+                    <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
+                      <span className="opacity-70">15:30 - 16:00</span>
+                      <span className="justify-self-end opacity-70 lg:order-3">
+                        30{t('m')}
+                      </span>
+                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                        {t('closing')}
+                      </span>
+                    </div>
+                  </div>
                 </>
               )}
             </div>
