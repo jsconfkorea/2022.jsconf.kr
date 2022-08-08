@@ -44,7 +44,7 @@ export const en: typeof ko = {
     },
     'jeremy-wagner': {
       name: 'Jeremy Wagner',
-      title: 'Optimizing INP',
+      title: 'Understanding and Optimizing Interaction to Next Paint (INP)',
     },
     'hung-viet-nguyen': {
       name: 'Hung Viet Nguyen',

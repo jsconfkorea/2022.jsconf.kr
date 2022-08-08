@@ -42,7 +42,7 @@ export const ko = {
     },
     'jeremy-wagner': {
       name: '제레미 와그너',
-      title: 'INP(Interaction to Next Paint)를 최적화하는 방법',
+      title: 'INP(Interaction to Next Paint)를 이해하고 최적화 하기',
     },
     'hung-viet-nguyen': {
       name: '흥 비엣 응우옌',
