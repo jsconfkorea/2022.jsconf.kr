@@ -9,10 +9,14 @@ import { useRouter } from 'next/router'
 export const program = {
   ko: {
     program: '프로그램',
+    description:
+      '행사기간 동안 오프라인 행사의 경험을 높여줄 소소한 액티비티들이 준비되어 있습니다!',
+    thu: '목',
     fri: '금',
     sat: '토',
     'multi-hall': '다목적 홀',
     room: '세미나실',
+    'pre-registration': '참가자 사전등록 및 소규모 밋업',
     registration: '참가자등록',
     opening: '오프닝 및 오프닝 공연',
     m: '분',
@@ -27,10 +31,14 @@ export const program = {
   },
   en: {
     program: 'Program',
+    description:
+      'We are preparing small and fun activities during the conference!',
+    thu: 'THU',
     fri: 'FRI',
     sat: 'SAT',
     'multi-hall': 'Multi-hall',
     room: 'Room',
+    'pre-registration': 'Pre-registration and chill meet-up',
     registration: 'Registration',
     opening: 'Opening & Performance',
     m: 'm',
@@ -52,7 +60,7 @@ export function ProgramPage() {
 
   const { query, replace } = useRouter()
 
-  const day = ['1', '2'].includes(query.day as string)
+  const day = ['0', '1', '2'].includes(query.day as string)
     ? (query.day as string)
     : '1'
   const room = ['M', 'A', 'C'].includes(query.room as string)
@@ -70,12 +78,32 @@ export function ProgramPage() {
           <div className="container flex flex-col justify-center">
             <h1 className="text-center text-4xl font-bold">{t('program')}</h1>
 
-            <div className="relative mt-8 grid h-12 w-80 grid-flow-col grid-cols-2 self-center rounded-full bg-[#252525] p-0.5 text-sm font-semibold text-white">
+            <h2 className="lg:text-md mt-6 px-12 text-center text-sm">
+              {t('description')}
+            </h2>
+
+            <div className="relative mt-12 grid h-12 w-80 grid-flow-col grid-cols-3 self-center rounded-full bg-[#252525] p-0.5 text-sm font-light text-white">
               <div
-                className={`ease-[cubic-bezier(0.34, 1.56, 0.64, 1)] absolute m-0.5 h-[calc(100%-4px)] w-40 rounded-full bg-black transition ease-in-out ${
-                  day === '2' ? 'translate-x-[calc(100%-4px)]' : ''
+                className={`ease-[cubic-bezier(0.34, 1.56, 0.64, 1)] absolute m-0.5 h-[calc(100%-4px)] w-[calc(320px/3)] rounded-full bg-black transition ease-in-out ${
+                  day === '1'
+                    ? 'translate-x-[calc(100%-4px)]'
+                    : day === '2'
+                    ? 'translate-x-[calc(200%-4px)]'
+                    : ''
                 }`}
               ></div>
+              <button
+                className={`z-10 flex h-full items-center justify-center rounded-full ${
+                  day === '0' ? '' : 'opacity-40'
+                }`}
+                onClick={() =>
+                  replace({ query: { ...query, day: '0' } }, undefined, {
+                    shallow: true,
+                  })
+                }
+              >
+                9.15 {t('thu')}
+              </button>
               <button
                 className={`z-10 flex h-full items-center justify-center rounded-full ${
                   day === '1' ? '' : 'opacity-40'
@@ -86,7 +114,7 @@ export function ProgramPage() {
                   })
                 }
               >
-                2022.9.16 {t('fri')}
+                9.16 {t('fri')}
               </button>
               <button
                 className={`z-10 flex h-full items-center justify-center rounded-full ${
@@ -98,50 +126,85 @@ export function ProgramPage() {
                   })
                 }
               >
-                2022.9.17 {t('sat')}
+                9.17 {t('sat')}
               </button>
             </div>
 
             <div className="relative mt-16 grid max-w-4xl grid-cols-3 gap-5 place-self-center lg:w-full lg:grid-cols-4 lg:px-5">
-              <button
-                className={`${
-                  room === 'M' ? 'underline !opacity-100' : ''
-                } underline-offset-8 opacity-60 sm:cursor-default lg:col-span-2 lg:text-white lg:no-underline lg:opacity-100`}
-                onClick={() =>
-                  replace({ query: { ...query, room: 'M' } }, undefined, {
-                    shallow: true,
-                  })
-                }
-              >
-                {t('multi-hall')}
-              </button>
-              <button
-                className={`${
-                  room === 'A' ? 'underline !opacity-100' : ''
-                } underline-offset-8 opacity-60 sm:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
-                onClick={() =>
-                  replace({ query: { ...query, room: 'A' } }, undefined, {
-                    shallow: true,
-                  })
-                }
-              >
-                {t('room')} A
-              </button>
-              <button
-                className={`${
-                  room === 'C' ? 'underline !opacity-100' : ''
-                } underline-offset-8 opacity-60 sm:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
-                onClick={() =>
-                  replace({ query: { ...query, room: 'C' } }, undefined, {
-                    shallow: true,
-                  })
-                }
-              >
-                {t('room')} C
-              </button>
+              {day === '0' ? (
+                <button
+                  className={`${
+                    room === 'M' ? 'underline !opacity-100' : ''
+                  } col-span-3 underline-offset-8 opacity-60 lg:col-span-4 lg:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
+                  onClick={() =>
+                    replace({ query: { ...query, room: 'M' } }, undefined, {
+                      shallow: true,
+                    })
+                  }
+                >
+                  {t('multi-hall')}
+                </button>
+              ) : (
+                <>
+                  <button
+                    className={`${
+                      room === 'M' ? 'underline !opacity-100' : ''
+                    } underline-offset-8 opacity-60 lg:col-span-2 lg:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
+                    onClick={() =>
+                      replace({ query: { ...query, room: 'M' } }, undefined, {
+                        shallow: true,
+                      })
+                    }
+                  >
+                    {t('multi-hall')}
+                  </button>
+                  <button
+                    className={`${
+                      room === 'A' ? 'underline !opacity-100' : ''
+                    } underline-offset-8 opacity-60 lg:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
+                    onClick={() =>
+                      replace({ query: { ...query, room: 'A' } }, undefined, {
+                        shallow: true,
+                      })
+                    }
+                  >
+                    {t('room')} A
+                  </button>
+                  <button
+                    className={`${
+                      room === 'C' ? 'underline !opacity-100' : ''
+                    } underline-offset-8 opacity-60 lg:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
+                    onClick={() =>
+                      replace({ query: { ...query, room: 'C' } }, undefined, {
+                        shallow: true,
+                      })
+                    }
+                  >
+                    {t('room')} C
+                  </button>
+                </>
+              )}
             </div>
 
             <div className="mt-8 grid w-full max-w-4xl grid-cols-1 gap-5 self-center px-5 lg:grid-cols-4 lg:gap-x-8">
+              {day === '0' && (
+                <>
+                  <div className="flex min-h-[180px] flex-col gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
+                    <div className="flex w-full grid-cols-2 justify-between gap-1.5 text-sm">
+                      <span className="opacity-70">17:00 - 19:00</span>
+                      <span className="justify-self-end opacity-70">
+                        120{t('m')}
+                      </span>
+                    </div>
+                    <div className="">
+                      <span className="justify-self-center font-light opacity-100">
+                        {t('pre-registration')}
+                      </span>
+                    </div>
+                  </div>
+                </>
+              )}
+
               {day === '1' && (
                 <>
                   <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
@@ -150,7 +213,7 @@ export function ProgramPage() {
                       <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
                       </span>
-                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                      <span className="font-light opacity-100 lg:justify-self-center">
                         {t('registration')}
                       </span>
                     </div>
@@ -162,7 +225,7 @@ export function ProgramPage() {
                       <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
                       </span>
-                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                      <span className="font-light opacity-100 lg:justify-self-center">
                         {t('opening')}
                       </span>
                     </div>
@@ -179,7 +242,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('anna-migas.title')}
                         </span>
                       </div>
@@ -203,14 +266,14 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room !== 'M' ? 'flex' : 'hidden'
-                      } min-h-[300px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 sm:col-span-2 lg:row-span-3 lg:!flex lg:gap-3`}
+                      } min-h-[300px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:col-span-2 lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 13:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('networking')}</span>
+                        <span className="font-light">{t('networking')}</span>
                       </div>
                       {/* <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -233,7 +296,7 @@ export function ProgramPage() {
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('networking')}</span>
+                        <span className="font-light">{t('networking')}</span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -256,7 +319,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('minsu-kim-changhui-lee.title')}
                         </span>
                       </div>
@@ -287,7 +350,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('anuradha-kumari.title')}
                         </span>
                       </div>
@@ -313,7 +376,7 @@ export function ProgramPage() {
                       <span className="justify-self-end opacity-70 lg:order-3">
                         90{t('m')}
                       </span>
-                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                      <span className="font-light opacity-100 lg:justify-self-center">
                         {t('lunch')}
                       </span>
                     </div>
@@ -330,7 +393,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('eleanor-rumsey.title')}
                         </span>
                       </div>
@@ -361,7 +424,7 @@ export function ProgramPage() {
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {w('jiyeon-noh.title')}
                         </span>
                       </div>
@@ -392,7 +455,7 @@ export function ProgramPage() {
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('networking')}</span>
+                        <span className="font-light">{t('networking')}</span>
                       </div>
                       {/* <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -415,7 +478,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('dwane-hemmings.title')}
                         </span>
                       </div>
@@ -445,7 +508,7 @@ export function ProgramPage() {
                       <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
                       </span>
-                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                      <span className="font-light opacity-100 lg:justify-self-center">
                         {t('break')}
                       </span>
                     </div>
@@ -462,7 +525,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('jeong-eun-lee.title')}
                         </span>
                       </div>
@@ -493,7 +556,7 @@ export function ProgramPage() {
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('networking')}</span>
+                        <span className="font-light">{t('networking')}</span>
                       </div>
                       {/* <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <Image
@@ -520,7 +583,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('hung-viet-nguyen.title')}
                         </span>
                       </div>
@@ -550,7 +613,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('jeremy-wagner.title')}
                         </span>
                       </div>
@@ -579,7 +642,7 @@ export function ProgramPage() {
                       <span className="">150{t('m')}</span>
                     </div>
                     <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                      <span className="font-semibold">{t('after-party')}</span>
+                      <span className="font-light">{t('after-party')}</span>
                     </div>
                   </div>
 
@@ -594,7 +657,7 @@ export function ProgramPage() {
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {w('jeongho-park.title')}
                         </span>
                       </div>
@@ -625,7 +688,7 @@ export function ProgramPage() {
                         <span className="">20{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
@@ -643,7 +706,7 @@ export function ProgramPage() {
                         <span className="">20{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
@@ -661,7 +724,7 @@ export function ProgramPage() {
                         <span className="">20{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
@@ -679,7 +742,7 @@ export function ProgramPage() {
                         <span className="">20{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
@@ -701,7 +764,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('chen-hui-jing.title')}
                         </span>
                       </div>
@@ -732,7 +795,7 @@ export function ProgramPage() {
                         <span className="">60{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('networking')}</span>
+                        <span className="font-light">{t('networking')}</span>
                       </div>
                     </a>
                   </Link>
@@ -748,7 +811,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('jong-chan-choi.title')}
                         </span>
                       </div>
@@ -778,7 +841,7 @@ export function ProgramPage() {
                       <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
                       </span>
-                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                      <span className="font-light opacity-100 lg:justify-self-center">
                         {t('break')}
                       </span>
                     </div>
@@ -795,7 +858,7 @@ export function ProgramPage() {
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {w('subeom-choi.title')}
                         </span>
                       </div>
@@ -826,7 +889,7 @@ export function ProgramPage() {
                         <span className="">90{t('m')}</span>
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('networking')}</span>
+                        <span className="font-light">{t('networking')}</span>
                       </div>
                       {/* <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -849,7 +912,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('seok-ju-na.title')}
                         </span>
                       </div>
@@ -880,7 +943,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('nicol-ribaudo.title')}
                         </span>
                       </div>
@@ -906,7 +969,7 @@ export function ProgramPage() {
                       <span className="justify-self-end opacity-70 lg:order-3">
                         90{t('m')}
                       </span>
-                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                      <span className="font-light opacity-100 lg:justify-self-center">
                         {t('lunch')}
                       </span>
                     </div>
@@ -923,7 +986,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('yong-wook-choi.title')}
                         </span>
                       </div>
@@ -954,7 +1017,7 @@ export function ProgramPage() {
                         <span className="">60{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('networking')}</span>
+                        <span className="font-light">{t('networking')}</span>
                       </div>
                     </a>
                   </Link>
@@ -970,7 +1033,7 @@ export function ProgramPage() {
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">
+                        <span className="font-light">
                           {s('erick-wendel.title')}
                         </span>
                       </div>
@@ -996,7 +1059,7 @@ export function ProgramPage() {
                       <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
                       </span>
-                      <span className="font-semibold opacity-100 lg:justify-self-center">
+                      <span className="font-light opacity-100 lg:justify-self-center">
                         {t('closing')}
                       </span>
                     </div>
