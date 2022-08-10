@@ -21,8 +21,9 @@ export const program = {
     break: '쉬는시간',
     networking: '네트워킹 & 휴식공간',
     'after-party': '애프터 파티, 공연',
-    'sponsor-session': '스폰서 세션',
+    'sponsor-session': '후원사 세션',
     closing: '클로징 & 단체사진',
+    TBA: '추후 공개',
   },
   en: {
     program: 'Program',
@@ -40,6 +41,7 @@ export const program = {
     'after-party': 'After party, Performance',
     'sponsor-session': 'Sponsor session',
     closing: 'Closing & Group Photo',
+    TBA: 'TBA',
   },
 }
 
@@ -104,7 +106,7 @@ export function ProgramPage() {
               <button
                 className={`${
                   room === 'M' ? 'underline !opacity-100' : ''
-                } underline-offset-8 opacity-60 lg:col-span-2 lg:text-white lg:no-underline lg:opacity-100`}
+                } underline-offset-8 opacity-60 sm:cursor-default lg:col-span-2 lg:text-white lg:no-underline lg:opacity-100`}
                 onClick={() =>
                   replace({ query: { ...query, room: 'M' } }, undefined, {
                     shallow: true,
@@ -116,7 +118,7 @@ export function ProgramPage() {
               <button
                 className={`${
                   room === 'A' ? 'underline !opacity-100' : ''
-                } underline-offset-8 opacity-60 lg:text-white lg:no-underline lg:opacity-100`}
+                } underline-offset-8 opacity-60 sm:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
                 onClick={() =>
                   replace({ query: { ...query, room: 'A' } }, undefined, {
                     shallow: true,
@@ -128,7 +130,7 @@ export function ProgramPage() {
               <button
                 className={`${
                   room === 'C' ? 'underline !opacity-100' : ''
-                } underline-offset-8 opacity-60 lg:text-white lg:no-underline lg:opacity-100`}
+                } underline-offset-8 opacity-60 sm:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
                 onClick={() =>
                   replace({ query: { ...query, room: 'C' } }, undefined, {
                     shallow: true,
@@ -176,7 +178,7 @@ export function ProgramPage() {
                         <span className="">11:30 - 11:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('anna-migas.title')}
                         </span>
@@ -188,6 +190,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/anna-migas.png"
+                          alt={s('anna-migas.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('anna-migas.name')}
@@ -199,27 +202,27 @@ export function ProgramPage() {
                   <Link href="#">
                     <a
                       className={`${
-                        room === 'A' ? 'flex' : 'hidden'
-                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                        room !== 'M' ? 'flex' : 'hidden'
+                      } min-h-[300px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 sm:col-span-2 lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 13:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('workshop')}</span>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">{t('networking')}</span>
                       </div>
-                      <div className="flex-1"></div>
+                      {/* <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <div className="h-6 w-6 rounded-full bg-gray-800"></div>
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           TBA
                         </span>
-                      </div>
+                      </div> */}
                     </a>
                   </Link>
 
-                  <Link href="#">
+                  {/* <Link href="#">
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
@@ -229,8 +232,8 @@ export function ProgramPage() {
                         <span className="">11:30 - 13:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('workshop')}</span>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">{t('networking')}</span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -240,7 +243,7 @@ export function ProgramPage() {
                         </span>
                       </div>
                     </a>
-                  </Link>
+                  </Link> */}
 
                   <Link href="/speakers/minsu-kim-changhui-lee">
                     <a
@@ -252,7 +255,7 @@ export function ProgramPage() {
                         <span className="">12:00 - 12:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('minsu-kim-changhui-lee.title')}
                         </span>
@@ -264,6 +267,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/minsu-kim-changhui-lee.png"
+                          alt={s('minsu-kim-changhui-lee.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('minsu-kim-changhui-lee.name')}
@@ -282,7 +286,7 @@ export function ProgramPage() {
                         <span className="">12:30 - 12:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('anuradha-kumari.title')}
                         </span>
@@ -294,6 +298,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/anuradha-kumari.png"
+                          alt={s('anuradha-kumari.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('anuradha-kumari.name')}
@@ -324,7 +329,7 @@ export function ProgramPage() {
                         <span className="">14:30 - 14:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('eleanor-rumsey.title')}
                         </span>
@@ -336,6 +341,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/eleanor-rumsey.png"
+                          alt={s('eleanor-rumsey.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('eleanor-rumsey.name')}
@@ -344,7 +350,7 @@ export function ProgramPage() {
                     </a>
                   </Link>
 
-                  <Link href="#">
+                  <Link href="/workshops/jiyeon-noh">
                     <a
                       className={`${
                         room === 'A' ? 'flex' : 'hidden'
@@ -354,14 +360,22 @@ export function ProgramPage() {
                         <span className="">14:30 - 16:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('workshop')}</span>
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {w('jiyeon-noh.title')}
+                        </span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
+                        <Image
+                          className="rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/jiyeon-noh.png"
+                          alt={w('jiyeon-noh.name')}
+                        />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          TBA
+                          {w('jiyeon-noh.name')}
                         </span>
                       </div>
                     </a>
@@ -371,22 +385,22 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                      } min-h-[300px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:row-span-3 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">14:30 - 16:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('workshop')}</span>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">{t('networking')}</span>
                       </div>
-                      <div className="flex-1"></div>
+                      {/* <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <div className="h-6 w-6 rounded-full bg-gray-800"></div>
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           TBA
                         </span>
-                      </div>
+                      </div> */}
                     </a>
                   </Link>
 
@@ -400,7 +414,7 @@ export function ProgramPage() {
                         <span className="">15:00 - 15:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('dwane-hemmings.title')}
                         </span>
@@ -412,6 +426,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/dwane-hemmings.png"
+                          alt={s('dwane-hemmings.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('dwane-hemmings.name')}
@@ -446,7 +461,7 @@ export function ProgramPage() {
                         <span className="">16:00 - 16:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('jeong-eun-lee.title')}
                         </span>
@@ -458,6 +473,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/jeong-eun-lee.png"
+                          alt={s('jeong-eun-lee.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('jeong-eun-lee.name')}
@@ -466,17 +482,17 @@ export function ProgramPage() {
                     </a>
                   </Link>
 
-                  <Link href="#">
+                  <Link href="">
                     <a
                       className={`${
                         room !== 'M' ? 'flex' : 'hidden'
-                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-3 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                      } min-h-[300px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:col-span-2 lg:row-span-3 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">16:00 - 17:30</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">{t('networking')}</span>
                       </div>
                       {/* <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
@@ -503,7 +519,7 @@ export function ProgramPage() {
                         <span className="">16:30 - 16:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('hung-viet-nguyen.title')}
                         </span>
@@ -514,6 +530,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/hung-viet-nguyen.png"
+                          alt={s('hung-viet-nguyen.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('hung-viet-nguyen.name')}
@@ -532,7 +549,7 @@ export function ProgramPage() {
                         <span className="">17:00 - 17:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('jeremy-wagner.title')}
                         </span>
@@ -543,6 +560,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/jeremy-wagner.png"
+                          alt={s('jeremy-wagner.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('jeremy-wagner.name')}
@@ -560,12 +578,12 @@ export function ProgramPage() {
                       <span className="">17:30 - 20:00</span>
                       <span className="">150{t('m')}</span>
                     </div>
-                    <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                    <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                       <span className="font-semibold">{t('after-party')}</span>
                     </div>
                   </div>
 
-                  <Link href="#">
+                  <Link href="/workshops/jeongho-park">
                     <a
                       className={`${
                         room === 'A' ? 'flex' : 'hidden'
@@ -575,14 +593,22 @@ export function ProgramPage() {
                         <span className="">17:30 - 19:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('workshop')}</span>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {w('jeongho-park.title')}
+                        </span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
+                        <Image
+                          className="rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/jeongho-park.png"
+                          alt={w('jeongho-park.name')}
+                        />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          TBA
+                          {w('jeongho-park.name')}
                         </span>
                       </div>
                     </a>
@@ -600,7 +626,7 @@ export function ProgramPage() {
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          {t('sponsor-session')}
+                          {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
                     </a>
@@ -618,7 +644,7 @@ export function ProgramPage() {
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          {t('sponsor-session')}
+                          {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
                     </a>
@@ -636,7 +662,7 @@ export function ProgramPage() {
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          {t('sponsor-session')}
+                          {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
                     </a>
@@ -654,7 +680,7 @@ export function ProgramPage() {
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
-                          {t('sponsor-session')}
+                          {t('sponsor-session')} ({t('TBA')})
                         </span>
                       </div>
                     </a>
@@ -674,7 +700,7 @@ export function ProgramPage() {
                         <span className="">10:30 - 10:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('chen-hui-jing.title')}
                         </span>
@@ -686,6 +712,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/chen-hui-jing.png"
+                          alt={s('chen-hui-jing.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('chen-hui-jing.name')}
@@ -698,7 +725,7 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room !== 'M' ? 'flex' : 'hidden'
-                      } group min-h-[200px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-2 lg:!flex lg:gap-3`}
+                      } min-h-[200px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:col-span-2 lg:row-span-2 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">10:30 - 11:30</span>
@@ -720,7 +747,7 @@ export function ProgramPage() {
                         <span className="">11:00 - 11:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('jong-chan-choi.title')}
                         </span>
@@ -732,6 +759,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/jong-chan-choi.png"
+                          alt={s('jong-chan-choi.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('jong-chan-choi.name')}
@@ -756,7 +784,7 @@ export function ProgramPage() {
                     </div>
                   </div>
 
-                  <Link href="#">
+                  <Link href="/workshops/subeom-choi">
                     <a
                       className={`${
                         room === 'A' ? 'flex' : 'hidden'
@@ -766,14 +794,22 @@ export function ProgramPage() {
                         <span className="">11:30 - 13:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('workshop')}</span>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">
+                          {w('subeom-choi.title')}
+                        </span>
                       </div>
                       <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
-                        <div className="h-6 w-6 rounded-full bg-gray-800"></div>
+                        <Image
+                          className="rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/subeom-choi.png"
+                          alt={w('subeom-choi.name')}
+                        />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
-                          TBA
+                          {w('subeom-choi.name')}
                         </span>
                       </div>
                     </a>
@@ -783,22 +819,22 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:row-span-3 lg:!flex lg:gap-3`}
+                      } min-h-[300px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:row-span-3 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">11:30 - 13:00</span>
                         <span className="">90{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
-                        <span className="font-semibold">{t('workshop')}</span>
+                      <div className="grid grid-flow-col justify-between text-sm text-white">
+                        <span className="font-semibold">{t('networking')}</span>
                       </div>
-                      <div className="flex-1"></div>
+                      {/* <div className="flex-1"></div>
                       <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
                         <div className="h-6 w-6 rounded-full bg-gray-800"></div>
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           TBA
                         </span>
-                      </div>
+                      </div> */}
                     </a>
                   </Link>
 
@@ -812,7 +848,7 @@ export function ProgramPage() {
                         <span className="">12:00 - 12:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('seok-ju-na.title')}
                         </span>
@@ -824,6 +860,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/seok-ju-na.png"
+                          alt={s('seok-ju-na.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('seok-ju-na.name')}
@@ -842,7 +879,7 @@ export function ProgramPage() {
                         <span className="">12:30 - 12:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('nicol-ribaudo.title')}
                         </span>
@@ -854,6 +891,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/nicol-ribaudo.png"
+                          alt={s('nicol-ribaudo.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('nicol-ribaudo.name')}
@@ -884,7 +922,7 @@ export function ProgramPage() {
                         <span className="">14:30 - 14:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('yong-wook-choi.title')}
                         </span>
@@ -896,6 +934,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/yong-wook-choi.png"
+                          alt={s('yong-wook-choi.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('yong-wook-choi.name')}
@@ -908,13 +947,13 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room !== 'M' ? 'flex' : 'hidden'
-                      } group min-h-[300px] flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:row-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
+                      } min-h-[300px] cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:col-span-2 lg:row-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">14:30 - 15:30</span>
                         <span className="">60{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">{t('networking')}</span>
                       </div>
                     </a>
@@ -930,7 +969,7 @@ export function ProgramPage() {
                         <span className="">15:00 - 15:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
-                      <div className="grid w-3/4 grid-flow-col justify-between text-sm text-white">
+                      <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
                         <span className="font-semibold">
                           {s('erick-wendel.title')}
                         </span>
@@ -942,6 +981,7 @@ export function ProgramPage() {
                           width={24}
                           height={24}
                           src="/erick-wendel.png"
+                          alt={s('erick-wendel.name')}
                         />
                         <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
                           {s('erick-wendel.name')}

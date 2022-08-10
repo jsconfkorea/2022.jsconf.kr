@@ -7,6 +7,7 @@ export const ko = {
   },
   nav: {
     about: '행사소개',
+    program: '프로그램',
     ticket: '티켓',
     speakers: '발표자',
     'code-of-conduct': '핵심원칙',

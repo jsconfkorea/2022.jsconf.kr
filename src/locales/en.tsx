@@ -8,6 +8,7 @@ export const en: typeof ko = {
   },
   nav: {
     about: 'About',
+    program: 'Program',
     ticket: 'Tickets',
     speakers: 'Speakers',
     'code-of-conduct': 'Code of Conduct',
