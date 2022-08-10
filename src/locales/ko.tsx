@@ -1,3 +1,4 @@
+import { program } from 'src/pages/ProgramPage'
 import { ticket } from 'src/pages/TicketPage'
 
 export const ko = {
@@ -6,6 +7,7 @@ export const ko = {
   },
   nav: {
     about: '행사소개',
+    program: '프로그램',
     ticket: '티켓',
     speakers: '발표자',
     'code-of-conduct': '핵심원칙',
@@ -122,4 +124,5 @@ export const ko = {
     description: '서울이 한눈에 보이는 노들섬에서 만나요!',
   },
   ticket: ticket.ko,
+  program: program.ko,
 }
