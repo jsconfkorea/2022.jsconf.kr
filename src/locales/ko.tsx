@@ -90,6 +90,11 @@ export const ko = {
       name: '에릭 웬델',
       title: `수천 개의 패키지에 영향을 미친 Node.js 코어의 버그를 수정한 방법에 대한 여정`,
     },
+    // Sponsor session
+    'dong-hwi-lee': {
+      name: '이동휘 (아임웹)',
+      title: `구글 엔지니어의 한국 스타트업 생존기`,
+    },
   },
   workshops: {
     Workshops: '워크샵',

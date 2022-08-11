@@ -681,7 +681,7 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                      } cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">17:30 - 17:50</span>
@@ -689,7 +689,20 @@ export function ProgramPage() {
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
                         <span className="font-light">
-                          {t('sponsor-session')} ({t('TBA')})
+                          {s('dong-hwi-lee.title')}
+                        </span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <Image
+                          className="h-6 self-center rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/dong-hwi-lee.png"
+                          alt={s('dong-hwi-lee.name')}
+                        />
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          {s('dong-hwi-lee.name')}
                         </span>
                       </div>
                     </a>
@@ -699,7 +712,7 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                      } cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">17:50 - 18:10</span>
@@ -717,7 +730,7 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                      } cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">18:10 - 18:30</span>
@@ -735,7 +748,7 @@ export function ProgramPage() {
                     <a
                       className={`${
                         room === 'C' ? 'flex' : 'hidden'
-                      } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:!flex lg:gap-3`}
+                      } cursor-default flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 lg:!flex lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
                         <span className="">18:30 - 18:50</span>
