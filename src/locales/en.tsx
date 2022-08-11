@@ -93,6 +93,11 @@ export const en: typeof ko = {
       name: 'Erick Wendel',
       title: `The journey about how I fixed a bug in the Node.js core that affected thousands of packages`,
     },
+    // Sponsor session
+    'dong-hwi-lee': {
+      name: `Donghwi Lee (I'mweb)`,
+      title: `A Googler's journey to Korean start-ups`,
+    },
   },
   workshops: {
     Workshops: 'Workshops',
