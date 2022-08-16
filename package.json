@@ -22,7 +22,7 @@
     "next": "^12.2.3",
     "next-intl": "^2.7.4",
     "next-seo": "^5.5.0",
-    "notion-client": "^6.12.12",
+    "notion-client": "^6.13.4",
     "pages": "link:./pages",
     "party-js": "^2.2.0",
     "pretendard": "^1.3.5",
