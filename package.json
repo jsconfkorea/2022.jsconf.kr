@@ -19,7 +19,7 @@
     "daisyui": "^2.20.0",
     "lib": "link:./src/lib",
     "locales": "link:./src/locales",
-    "next": "^12.2.3",
+    "next": "^12.2.5",
     "next-intl": "^2.7.4",
     "next-seo": "^5.5.0",
     "notion-client": "^6.12.12",
