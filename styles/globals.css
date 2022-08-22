@@ -49,7 +49,18 @@ figure.notion-block-8f632ea3044c436fb47ca7efb9dfa4cc > div {
   aspect-ratio: 2/1 !important;
 }
 
-.notion-asset-wrapper.notion-asset-wrapper-image > div {
+div.notion-block-5736e5c6155c449a84563a4e41dda1fd
+  figure.notion-asset-wrapper-image
+  > div,
+div.notion-block-a7c5dfb11fc64075bfd4d12eabab6136
+  figure.notion-asset-wrapper-image
+  > div {
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.speaker figure.notion-asset-wrapper-image > div {
   aspect-ratio: 1;
   border-radius: 0.5rem;
   overflow: hidden;

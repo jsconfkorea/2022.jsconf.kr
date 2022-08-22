@@ -48,11 +48,11 @@ export const Sponsors = () => {
                 className={`grid grid-cols-${sponsors.length} gap-5 sm:flex-1 sm:justify-center`}
               >
                 {sponsors.map(({ name, link }) => (
-                  <Link key={name} href={link}>
+                  <Link key={name} href={`/sponsors/${name}`}>
                     <a
                       className="hover:opacity-80 sm:place-self-center"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      // target="_blank"
+                      // rel="noopener noreferrer"
                     >
                       <Image
                         className="w-24 sm:w-36"

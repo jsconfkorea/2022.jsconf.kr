@@ -31,6 +31,18 @@ export const ko = {
     gold: '골드 등급',
     silver: '실버 등급',
     bronze: '브론즈 등급',
+    imweb: {
+      name: '아임웹',
+    },
+    lineplus: {
+      name: '라인플러스',
+    },
+    gabia: {
+      name: '가비아',
+    },
+    atant: {
+      name: '앤트',
+    },
   },
   speakers: {
     Speakers: '발표자',
