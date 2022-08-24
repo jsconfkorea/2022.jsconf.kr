@@ -27,6 +27,12 @@ export const sponsors = {
       link: 'https://linepluscorp.com',
     },
   ],
+  'after-party': [
+    {
+      name: 'yogiyo',
+      link: 'https://wesang.com',
+    },
+  ],
 }
 
 export const Sponsors = () => {
@@ -41,7 +47,7 @@ export const Sponsors = () => {
         {Object.entries(sponsors).map(([level, sponsors]) => (
           <Fade key={level} bottom distance="1rem" duration={500}>
             <div className="grid place-content-center gap-2 rounded-lg bg-white p-5 text-black sm:flex sm:place-content-start sm:gap-12 sm:px-12 sm:py-10">
-              <h3 className="text-center text-sm font-semibold sm:place-self-center sm:text-lg">
+              <h3 className="text-center text-sm font-semibold sm:min-w-[100px] sm:place-self-center sm:text-lg">
                 {t(level)}
               </h3>
               <div
@@ -49,11 +55,7 @@ export const Sponsors = () => {
               >
                 {sponsors.map(({ name, link }) => (
                   <Link key={name} href={`/sponsors/${name}`}>
-                    <a
-                      className="hover:opacity-80 sm:place-self-center"
-                      // target="_blank"
-                      // rel="noopener noreferrer"
-                    >
+                    <a className="hover:opacity-80 sm:place-self-center">
                       <Image
                         className="w-24 sm:w-36"
                         width={200}

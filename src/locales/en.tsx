@@ -32,6 +32,7 @@ export const en: typeof ko = {
     gold: 'Gold',
     silver: 'Silver',
     bronze: 'Bronze',
+    'after-party': 'After party',
     imweb: {
       name: 'Imweb',
     },

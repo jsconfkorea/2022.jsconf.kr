@@ -31,6 +31,7 @@ export const ko = {
     gold: '골드 등급',
     silver: '실버 등급',
     bronze: '브론즈 등급',
+    'after-party': '애프터파티',
     imweb: {
       name: '아임웹',
     },
