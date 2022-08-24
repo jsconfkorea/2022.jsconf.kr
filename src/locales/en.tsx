@@ -32,6 +32,18 @@ export const en: typeof ko = {
     gold: 'Gold',
     silver: 'Silver',
     bronze: 'Bronze',
+    imweb: {
+      name: 'Imweb',
+    },
+    lineplus: {
+      name: 'LINE Plus',
+    },
+    gabia: {
+      name: 'gabia',
+    },
+    atant: {
+      name: 'atant',
+    },
   },
   speakers: {
     Speakers: 'Speakers',
