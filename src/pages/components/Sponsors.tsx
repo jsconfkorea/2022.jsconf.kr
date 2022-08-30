@@ -17,7 +17,7 @@ export const sponsors = {
       link: 'https://company.gabia.com',
     },
     {
-      name: 'atant',
+      name: 'aaant',
       link: 'https://www.labnote.co',
     },
   ],

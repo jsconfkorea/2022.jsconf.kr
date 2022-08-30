@@ -41,7 +41,7 @@ export const ko = {
     gabia: {
       name: '가비아',
     },
-    atant: {
+    aaant: {
       name: '앤트',
     },
   },
@@ -107,6 +107,10 @@ export const ko = {
     'dong-hwi-lee': {
       name: '이동휘 (아임웹)',
       title: `구글 엔지니어의 한국 스타트업 생존기`,
+    },
+    'sukjoo-hong': {
+      name: '홍석주 (앤트)',
+      title: `스타트업 개발팀에서 협업하기`,
     },
   },
   workshops: {

@@ -796,7 +796,20 @@ export function ProgramPage() {
                       </div>
                       <div className="grid grid-flow-col justify-between text-sm text-white">
                         <span className="font-light">
-                          {t('sponsor-session')} ({t('TBA')})
+                          {s('sukjoo-hong.title')}
+                        </span>
+                      </div>
+                      <div className="flex-1"></div>
+                      <div className="mt-1.5 flex grid-flow-col gap-2 text-sm text-white">
+                        <Image
+                          className="h-6 self-center rounded-full grayscale group-hover:grayscale-0"
+                          width={24}
+                          height={24}
+                          src="/sukjoo-hong.png"
+                          alt={s('sukjoo-hong.name')}
+                        />
+                        <span className="self-center text-xs opacity-70 group-hover:underline group-hover:opacity-100">
+                          {s('sukjoo-hong.name')}
                         </span>
                       </div>
                     </a>

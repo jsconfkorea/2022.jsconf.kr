@@ -42,8 +42,8 @@ export const en: typeof ko = {
     gabia: {
       name: 'gabia',
     },
-    atant: {
-      name: 'atant',
+    aaant: {
+      name: 'aaant',
     },
   },
   speakers: {
@@ -110,6 +110,10 @@ export const en: typeof ko = {
     'dong-hwi-lee': {
       name: `Donghwi Lee (I'mweb)`,
       title: `A Googler's journey to Korean start-ups`,
+    },
+    'sukjoo-hong': {
+      name: 'Sukjoo Hong (aaant)',
+      title: `Working in startup engineering team`,
     },
   },
   workshops: {
