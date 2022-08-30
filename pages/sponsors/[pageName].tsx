@@ -39,14 +39,14 @@ export const recordMap = {
     imweb: '0f1ffcea5db54a9a9e6e663688364ebe',
     lineplus: '42182f2d636c4a44a375621fd9633edd',
     gabia: 'c09eb74f950248e1b6c0086b5d1e9898',
-    atant: '45570c202ffa4366bac286f245df076e',
+    aaant: '45570c202ffa4366bac286f245df076e',
     yogiyo: '9c9d5f85cade4a928e06a55180df6028',
   },
   en: {
     imweb: '5917626f1f9449e4a96f547251f89ebe',
     lineplus: '1efab95e59894d5a815a8d4a46cb2ed9',
     gabia: '5ad66904a05d4d0c8848b034a1551a63',
-    atant: '14687ce676cf4f2f847a572d46e9704b',
+    aaant: '14687ce676cf4f2f847a572d46e9704b',
     yogiyo: 'ff97c670d3e648d08414ea2d7f208c56',
   },
 } as const
