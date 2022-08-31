@@ -17,6 +17,12 @@ export const GoogleAnalytics = ({ id }: Props) => {
         gtag('js', new Date());
         gtag('config', '${id}');`}
       </Script>
+      <Script
+        async
+        defer
+        data-website-id="19c44ce7-1b3d-462a-b7b9-47f7e86849d4"
+        src="https://umami.ysm.vercel.app/umami.js"
+      />
     </>
   )
 }
