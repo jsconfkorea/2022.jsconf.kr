@@ -112,6 +112,10 @@ export const ko = {
       name: '홍석주 (앤트)',
       title: `스타트업 개발팀에서 협업하기`,
     },
+    'chaeyoung-ha': {
+      name: '하채영 (가비아)',
+      title: `웹을 넘어 클라우드로, 가비아`,
+    },
   },
   workshops: {
     Workshops: '워크샵',
