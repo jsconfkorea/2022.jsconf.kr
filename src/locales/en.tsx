@@ -115,6 +115,10 @@ export const en: typeof ko = {
       name: 'Sukjoo Hong (aaant)',
       title: `Working in startup engineering team`,
     },
+    'chaeyoung-ha': {
+      name: 'Chaeyoung Ha (gabia)',
+      title: `To Cloud beyond Web, gabia`,
+    },
   },
   workshops: {
     Workshops: 'Workshops',
