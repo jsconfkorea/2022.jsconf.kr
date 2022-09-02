@@ -33,6 +33,11 @@ module.exports = {
         destination: '/call-for-proposals',
         permanent: true,
       },
+      {
+        source: '/survey',
+        destination: 'https://tally.so/r/wvG1dv',
+        permanent: true,
+      },
     ]
   },
 }
