@@ -14,7 +14,10 @@ if (!isServer()) {
   console.log('%c👋', 'font-size: 10rem')
 }
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({
+  Component,
+  pageProps,
+}: AppProps<{ messages: typeof messages['en'] }>) {
   const { locale } = useRouter()
 
   return (
