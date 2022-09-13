@@ -135,16 +135,14 @@ export function ProgramPage() {
             <div className="relative mt-16 grid max-w-4xl grid-cols-3 gap-5 place-self-center lg:w-full lg:grid-cols-4 lg:px-5">
               {day === '0' ? (
                 <button
-                  className={`${
-                    room === 'M' ? 'underline !opacity-100' : ''
-                  } col-span-3 underline-offset-8 opacity-60 lg:col-span-4 lg:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
+                  className={`col-span-3 underline underline-offset-8 !opacity-100 opacity-60 lg:col-span-4 lg:cursor-default lg:text-white lg:no-underline lg:opacity-100`}
                   onClick={() =>
                     replace({ query: { ...query, room: 'M' } }, undefined, {
                       shallow: true,
                     })
                   }
                 >
-                  {t('multi-hall')}
+                  {t('room')} A
                 </button>
               ) : (
                 <>
