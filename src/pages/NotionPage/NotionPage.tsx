@@ -3,7 +3,7 @@ import { Navbar } from 'components/Navbar'
 import { InferGetStaticPropsType } from 'next'
 import { useTranslations } from 'next-intl'
 import { NextSeo } from 'next-seo'
-import Image from 'next/image'
+// import Image from 'next/future/image'
 import Link from 'next/link'
 import { getStaticProps } from 'pages/[pageName]'
 import { NotionRenderer } from 'react-notion-x'
@@ -30,7 +30,7 @@ export default function NotionPage({ recordMap, pageName }: PageProps) {
               darkMode
               disableHeader
               components={{
-                nextImage: Image,
+                // nextImage: Image,
                 nextLink: Link,
               }}
               forceCustomImages

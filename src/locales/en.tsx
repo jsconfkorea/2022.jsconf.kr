@@ -15,6 +15,7 @@ export const en: typeof ko = {
     sponsors: 'Sponsors',
     workshops: 'Workshops',
     sponsorship: 'Sponsorship',
+    accessibility: 'Accessibility',
     scholarship: 'Scholarship',
     'privacy-policy': 'Privacy Policy',
 

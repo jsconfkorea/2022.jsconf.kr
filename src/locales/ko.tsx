@@ -14,6 +14,7 @@ export const ko = {
     sponsors: '후원사',
     workshops: '워크샵',
     sponsorship: '후원사 모집',
+    accessibility: '접근성',
     scholarship: '장학제도',
     'privacy-policy': '개인정보 처리방침',
 
