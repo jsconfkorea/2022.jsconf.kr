@@ -11,11 +11,6 @@ module.exports = {
     domains: ['notion.so', 'www.notion.so', 's3.us-west-2.amazonaws.com'],
     formats: ['image/avif', 'image/webp'],
   },
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
-  },
   redirects() {
     return [
       {

@@ -47,6 +47,7 @@ const recordMap = {
     'privacy-policy': '9527de9651ca4679b5dd79ffbd42d76a',
     sponsorship: 'f4e0595ecfa8492cbb79f848f7de0f2b',
     scholarship: '0f134efed4f945a8a0dc8de7fbe50f1e',
+    accessibility: '2f9dc13948ae4f089472531a4411b004',
     'call-for-proposals': '3426e1ac7231479288b1fd489c518e20',
   },
   en: {
@@ -55,6 +56,7 @@ const recordMap = {
     'privacy-policy': 'c945e35036cd46abab2ca01da1497d97',
     sponsorship: '29fc4391cf4f41fc860c6972d84c24fc',
     scholarship: 'a5006e7156b64a6eaf6bc4b188ec14d1',
+    accessibility: 'db356e5f9dad41b783c8686343300c3f',
     'call-for-proposals': 'fc40a4b9882c4bab815886ef3cd0970b',
   },
 } as const
