@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react'
 const menus = [
   'about',
   'program',
-  'ticket',
+  // 'ticket',
   'speakers',
   'workshops',
   // 'sponsorship',
@@ -75,7 +75,7 @@ export function Navbar() {
         </ul>
 
         {/* Mobile */}
-        <label className="swap-rotate btn swap btn-circle border-none bg-transparent hover:bg-transparent lg:hidden">
+        <label className="btn swap btn-circle swap-rotate border-none bg-transparent hover:bg-transparent lg:hidden">
           <input
             ref={ref}
             type="checkbox"
