@@ -1,7 +1,5 @@
 import { Graphic } from 'components/Graphic'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
-import { confetti, variation } from 'party-js'
 import 'react-notion-x/src/styles.css'
 import Fade from 'react-reveal/Fade'
 
@@ -28,7 +26,7 @@ export function Hero() {
               <Fade bottom duration={700} delay={300}>
                 <h2 className="inline">{t('location')}</h2>
               </Fade>
-              <Fade bottom distance="1rem" duration={700} delay={450}>
+              {/* <Fade bottom distance="1rem" duration={700} delay={450}>
                 <Link href="/ticket">
                   <a
                     className="sm:mt-15 btn mx-auto mt-8 w-32 bg-white text-xs text-black hover:bg-slate-500 sm:btn-lg sm:w-44"
@@ -41,7 +39,7 @@ export function Hero() {
                     {t('buy-tickets')}
                   </a>
                 </Link>
-              </Fade>
+              </Fade> */}
             </div>
           </div>
         </div>
