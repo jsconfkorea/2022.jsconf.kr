@@ -703,7 +703,7 @@ export function ProgramPage() {
                         30{t('m')}
                       </span>
                       <span className="font-light opacity-100 lg:justify-self-center">
-                        {t('performance')}
+                        {t('after-party')} & {t('performance')}
                       </span>
                     </div>
                   </div>
