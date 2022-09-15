@@ -33,6 +33,11 @@ module.exports = {
         destination: 'https://tally.so/r/wvG1dv',
         permanent: true,
       },
+      {
+        source: '/report',
+        destination: 'https://forms.gle/WrKx9zviRqXf4fJw9',
+        permanent: true,
+      },
     ]
   },
 }
