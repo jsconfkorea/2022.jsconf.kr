@@ -1,8 +1,6 @@
 import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import { InferGetStaticPropsType } from 'next'
-import { useTranslations } from 'next-intl'
-import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import { getStaticProps } from 'pages/[pageName]'
 import { NotionRenderer } from 'react-notion-x'
@@ -12,21 +10,21 @@ import Fade from 'react-reveal/Fade'
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function SponsorDetailPage({ recordMap, pageName }: PageProps) {
-  const t = useTranslations('sponsors')
+  // const t = useTranslations('sponsors')
 
-  const title = `${t(`${pageName}.name`)} | JSConf Korea 2022 🌈`
-  const description = `JSConf Korea 2022 ${t('Sponsors')}`
+  // const title = `${t(`${pageName}.name`)} | JSConf Korea 2022 🌈`
+  // const description = `JSConf Korea 2022 ${t('Sponsors')}`
 
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={title}
         description={description}
         openGraph={{
           title,
           description,
         }}
-      />
+      /> */}
 
       <div className="flex w-full flex-row">
         <Navbar />

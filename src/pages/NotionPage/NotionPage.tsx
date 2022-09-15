@@ -1,8 +1,6 @@
 import { Footer } from 'components/Footer'
 import { Navbar } from 'components/Navbar'
 import { InferGetStaticPropsType } from 'next'
-import { useTranslations } from 'next-intl'
-import { NextSeo } from 'next-seo'
 // import Image from 'next/future/image'
 import Link from 'next/link'
 import { getStaticProps } from 'pages/[pageName]'
@@ -13,11 +11,11 @@ import Fade from 'react-reveal/Fade'
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 export default function NotionPage({ recordMap, pageName }: PageProps) {
-  const t = useTranslations('nav')
+  // const t = useTranslations('nav')
 
   return (
     <>
-      <NextSeo title={t(pageName)} />
+      {/* <NextSeo title={t(pageName)} /> */}
       <div className="flex w-full flex-col">
         <Navbar />
 
