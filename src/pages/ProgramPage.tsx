@@ -873,7 +873,7 @@ export function ProgramPage() {
                       } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">10:50 - 11:15</span>
+                        <span className="">10:30 - 10:55</span>
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
@@ -951,7 +951,7 @@ export function ProgramPage() {
                       } group flex-col gap-1.5 rounded-xl border border-[#2f2f2f] bg-transparent p-6 hover:border-white lg:col-span-2 lg:!flex lg:min-h-[164px] lg:gap-3`}
                     >
                       <div className="flex justify-between text-sm opacity-70">
-                        <span className="">11:20 - 11:45</span>
+                        <span className="">11:00 - 11:25</span>
                         <span className="">25{t('m')}</span>
                       </div>
                       <div className="grid w-4/5 grid-flow-col justify-between text-sm text-white">
@@ -981,7 +981,7 @@ export function ProgramPage() {
                     } grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-2 lg:!flex`}
                   >
                     <div className="grid w-full grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
-                      <span className="opacity-70">11:50 - 12:00</span>
+                      <span className="opacity-70">11:30 - 12:00</span>
                       <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
                       </span>
