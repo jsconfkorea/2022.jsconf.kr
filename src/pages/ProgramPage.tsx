@@ -27,7 +27,7 @@ export const program = {
     performance: '공연',
     'after-party': '애프터 파티',
     'sponsor-session': '후원사 세션',
-    closing: '클로징 & 단체사진',
+    closing: '클로징 공연 & 단체사진',
     TBA: '추후 공개',
   },
   en: {
@@ -50,7 +50,7 @@ export const program = {
     performance: 'Performance',
     'after-party': 'After party',
     'sponsor-session': 'Sponsor session',
-    closing: 'Closing & Group Photo',
+    closing: 'Closing Performance & Group Photo',
     TBA: 'TBA',
   },
 }
@@ -1199,10 +1199,10 @@ export function ProgramPage() {
 
                   <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
                     <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
-                      <span className="opacity-70">15:30 - 16:00</span>
-                      <span className="justify-self-end opacity-70 lg:order-3">
+                      <span className="opacity-70">15:30 ~</span>
+                      {/* <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
-                      </span>
+                      </span> */}
                       <span className="font-light opacity-100 lg:justify-self-center">
                         {t('closing')}
                       </span>
