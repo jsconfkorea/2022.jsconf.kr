@@ -1199,7 +1199,7 @@ export function ProgramPage() {
 
                   <div className="grid gap-1.5 rounded-xl bg-[#191919] p-6 lg:col-span-4">
                     <div className="grid grid-cols-2 gap-1.5 text-sm lg:grid-flow-col lg:grid-cols-3">
-                      <span className="opacity-70">14:00 ~</span>
+                      <span className="opacity-70">16:00 ~</span>
                       {/* <span className="justify-self-end opacity-70 lg:order-3">
                         30{t('m')}
                       </span> */}
