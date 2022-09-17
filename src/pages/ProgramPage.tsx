@@ -64,7 +64,7 @@ export function ProgramPage() {
 
   const day = ['0', '1', '2'].includes(query.day as string)
     ? (query.day as string)
-    : '1'
+    : '2'
   const room = ['M', 'A', 'C'].includes(query.room as string)
     ? (query.room as string)
     : 'M'
