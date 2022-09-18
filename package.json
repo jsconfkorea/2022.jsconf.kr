@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "components": "link:./src/pages/components",
-    "daisyui": "^2.25.0",
+    "daisyui": "^2.27.0",
     "lib": "link:./src/lib",
     "locales": "link:./src/locales",
     "next": "^12.3.0",
@@ -37,11 +37,11 @@
     "utils": "link:./src/utils"
   },
   "devDependencies": {
-    "@types/node": "^18.7.16",
-    "@types/react": "^18.0.18",
+    "@types/node": "^18.7.18",
+    "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
-    "autoprefixer": "^10.4.8",
-    "eslint": "8.23.0",
+    "autoprefixer": "^10.4.11",
+    "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
     "eslint-config-prettier": "^8.5.0",
     "postcss": "^8.4.16",
