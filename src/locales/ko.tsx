@@ -51,58 +51,111 @@ export const ko = {
     'anna-migas': {
       name: '안나 미가스',
       title: '아무도 이야기하지 않는 웹 성능 지표의 비밀',
+      link: {
+        slide:
+          'https://drive.google.com/file/d/13etA5nMuG-Y6jhciT-9Il5KAysAl5Wl8/view',
+      },
     },
     'jong-chan-choi': {
       name: '최종찬',
       title: '웹뷰와 네이티브를 제대로 이어붙이기 - Webview Request Protocol',
+      link: {
+        slide:
+          'https://docs.google.com/presentation/d/1lIHV5hdE46i3ZFw--yNM7loyh-rsUskiBvrvOJWm6Us/edit',
+      },
     },
     'jeremy-wagner': {
       name: '제레미 와그너',
       title: 'INP(Interaction to Next Paint)를 이해하고 최적화 하기',
+      link: {
+        slide:
+          'https://drive.google.com/file/d/1jyUNCx6T0MZhKkNSOaf218LbpZg1yzwU/view',
+      },
     },
     'hung-viet-nguyen': {
       name: '흥 비엣 응우옌',
       title: '어떻게 두 달만에 오픈소스로 깃헙 별 1600개를 받을 수 있었을까?',
+      link: {
+        slide:
+          'https://drive.google.com/file/d/13oaDGgamR_-8kC6iQAfz8n_C0gxjNJDg/view',
+      },
     },
     'jeong-eun-lee': {
       name: '이정은',
       title: 'if (확장성있는 설계) return “워라밸”',
+      link: {
+        slide:
+          'https://docs.google.com/presentation/d/1CmpaGsKMTd5Y-xlpXs4BBQUq989dRvmC/edit#slide=id.p1',
+      },
     },
     'nicol-ribaudo': {
       name: '니콜로 리바우도',
       title: '자바스크립트에 그들이 온다: 기대되는 다음 피쳐 Records 와 Tuples',
+      link: {
+        slide:
+          'https://nicolo-ribaudo.github.io/2022-09-jsconf-korea-slides/#/1',
+      },
     },
     'chen-hui-jing': {
       name: '첸 후이 징',
       title: '엔터프라이즈 CSS grid의 다양한 특징',
+      link: {
+        slide: 'https://huijing.github.io/slides/99-jsconfkr-2022/',
+      },
     },
     'dwane-hemmings': {
       name: '드웨인 헤밍스',
       title: 'React x Web Components : 어떻게 존재하고 어떻게 될 수 있을까',
+      link: {
+        slide:
+          'https://drive.google.com/file/d/1lF7RsuH7dmXI9aDw71QGGwmGSU126ZkH/view',
+      },
     },
     'seok-ju-na': {
       name: '나석주',
       title: 'React로 영수증 출력해보기 (부제: 자바스크립트로 POS를 만든다고?)',
+      link: {
+        slide: 'https://slides.com/seokjume/react-thermal-print',
+      },
     },
     'minsu-kim-changhui-lee': {
       name: '김민수, 이창희',
       title: `프론트엔드에서 함수형을 추구하면 안되는걸까?`,
+      link: {
+        slide:
+          'https://drive.google.com/file/d/1P_XzZOoI4XMlXpJbzRIf8O_f1oAaf31b/view',
+      },
     },
     'anuradha-kumari': {
       name: '아누라다 쿠마리',
       title: `Svelte와 함께 하는 접근성 - 컴파일러 경고를 넘어서`,
+      link: {
+        slide:
+          'https://docs.google.com/presentation/d/1ses9V7gl9OYloOeUVnqK7n3wCnZURfOJwN54ivEEjnc/edit#slide=id.p',
+      },
     },
     'eleanor-rumsey': {
       name: '엘러너 럼지',
       title: `성공적으로 실패하는 방법`,
+      link: {
+        slide:
+          'https://github.com/eleanorRumsey/jsConfKorea2022/blob/main/HowToFailSuccessfully.pdf',
+      },
     },
     'yong-wook-choi': {
       name: '최용욱',
       title: `Deno: 차세대 JavaScript 런타임`,
+      link: {
+        slide: 'https://github.com/hyp3rflow/jsconf-kr-2022-deno',
+      },
     },
     'erick-wendel': {
       name: '에릭 웬델',
       title: `수천 개의 패키지에 영향을 미친 Node.js 코어의 버그를 수정한 방법에 대한 여정`,
+      link: {
+        slide:
+          'https://www.icloud.com/keynote/0ebVCpbGca71WwkLlffcaSsyQ#The_Journey_About_How_I_Fixed_a_Bug_in_the_Node.js_Core_that_Affected_Thousands_of_Packages_-_jsconfkorea_-_17092022',
+      },
     },
     // Sponsor session
     'dong-hwi-lee': {
