@@ -17,6 +17,7 @@ export const Venue = () => {
         <Fade bottom distance="1rem" duration={700}>
           <div className="flex flex-col overflow-hidden rounded-lg sm:row-span-2">
             <iframe
+              title="Google Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6329.149349104078!2d126.95384186044502!3d37.51794849902677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca107bd0eb5d1%3A0xa1a994a949cf6697!2sNodeulseom%20Island!5e0!3m2!1sen!2skr!4v1658604684351!5m2!1sen!2skr"
               className="aspect-[2/1] w-full hover:opacity-80 sm:aspect-auto sm:h-full"
               allowFullScreen
