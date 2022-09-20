@@ -75,8 +75,9 @@ export function Navbar() {
         </ul>
 
         {/* Mobile */}
-        <label className="btn swap btn-circle swap-rotate border-none bg-transparent hover:bg-transparent lg:hidden">
+        <label className="swap-rotate btn swap btn-circle border-none bg-transparent hover:bg-transparent lg:hidden">
           <input
+            aria-label="Open Menu"
             ref={ref}
             type="checkbox"
             onChange={({ currentTarget }) => setIsOpen(currentTarget.checked)}
@@ -106,7 +107,7 @@ export function Navbar() {
       <div className="">
         <ul
           className={`menu menu-vertical fixed top-0 left-0 z-30 flex h-screen h-[100svh] max-h-screen w-full justify-start justify-items-start bg-black pt-[88px] pb-12 text-lg text-white transition-opacity duration-300 lg:hidden${
-            isOpen ? ' opacity-100' : ' pointer-events-none opacity-0'
+            isOpen ? ' opacity-100' : 'pointer-events-none hidden opacity-0'
           }`}
         >
           {menus.map((menu) => (

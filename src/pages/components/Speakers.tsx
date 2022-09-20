@@ -51,6 +51,7 @@ export const Speakers = () => {
                     href={t(`${speaker}.link.slide`)}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Slides"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +91,9 @@ export const Speakers = () => {
                   </svg>
                 </div>
                 <h3 className="text-[13px] font-semibold leading-4 sm:text-base">
-                  {t(`${speaker}.title`)}
+                  <Link href={`/speakers/${speaker}`}>
+                    <a>{t(`${speaker}.title`)}</a>
+                  </Link>
                 </h3>
                 <span className="text-xs text-slate-400 sm:text-sm">
                   {t(`${speaker}.name`)}
