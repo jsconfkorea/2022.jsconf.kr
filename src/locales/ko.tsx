@@ -53,7 +53,7 @@ export const ko = {
       title: '아무도 이야기하지 않는 웹 성능 지표의 비밀',
       link: {
         slide:
-          'https://drive.google.com/file/d/13etA5nMuG-Y6jhciT-9Il5KAysAl5Wl8/view',
+          'https://www.slideshare.net/AnnaMigas1/the-secret-web-performance-metric-no-one-is-talking-about',
       },
     },
     'jong-chan-choi': {
@@ -69,7 +69,7 @@ export const ko = {
       title: 'INP(Interaction to Next Paint)를 이해하고 최적화 하기',
       link: {
         slide:
-          'https://drive.google.com/file/d/1jyUNCx6T0MZhKkNSOaf218LbpZg1yzwU/view',
+          'https://speaking.jeremy.codes/tqo2nq/optimizing-interaction-to-next-paint-inp',
       },
     },
     'hung-viet-nguyen': {
@@ -77,7 +77,7 @@ export const ko = {
       title: '어떻게 두 달만에 오픈소스로 깃헙 별 1600개를 받을 수 있었을까?',
       link: {
         slide:
-          'https://drive.google.com/file/d/13oaDGgamR_-8kC6iQAfz8n_C0gxjNJDg/view',
+          'https://jsconf.hung.dev/1',
       },
     },
     'jeong-eun-lee': {
@@ -85,7 +85,7 @@ export const ko = {
       title: 'if (확장성있는 설계) return “워라밸”',
       link: {
         slide:
-          'https://docs.google.com/presentation/d/1CmpaGsKMTd5Y-xlpXs4BBQUq989dRvmC/edit#slide=id.p1',
+          'https://github.com/chbin05/JSConfKorea2022',
       },
     },
     'nicol-ribaudo': {
@@ -93,7 +93,7 @@ export const ko = {
       title: '자바스크립트에 그들이 온다: 기대되는 다음 피쳐 Records 와 Tuples',
       link: {
         slide:
-          'https://nicolo-ribaudo.github.io/2022-09-jsconf-korea-slides/#/1',
+          'https://nicolo-ribaudo.github.io/2022-09-jsconf-korea-slides/',
       },
     },
     'chen-hui-jing': {
@@ -123,7 +123,7 @@ export const ko = {
       title: `프론트엔드에서 함수형을 추구하면 안되는걸까?`,
       link: {
         slide:
-          'https://drive.google.com/file/d/1P_XzZOoI4XMlXpJbzRIf8O_f1oAaf31b/view',
+          'https://moonlit-nougat-422445.netlify.app/1',
       },
     },
     'anuradha-kumari': {
