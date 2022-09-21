@@ -95,7 +95,7 @@ export function Footer() {
 
         {/* CopyRight */}
         <div className="flex gap-4 place-self-center sm:order-2">
-          <span className="text-xs text-[#404040]">
+          <span className="text-xs text-[#919191]">
             © COPYRIGHT JSCONF KOREA | 2019 - {new Date().getFullYear()}
           </span>
         </div>
