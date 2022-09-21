@@ -54,7 +54,7 @@ export const en: typeof ko = {
       title: 'The secret web performance metric no one is talking about',
       link: {
         slide:
-          'https://drive.google.com/file/d/13etA5nMuG-Y6jhciT-9Il5KAysAl5Wl8/view',
+          'https://www.slideshare.net/AnnaMigas1/the-secret-web-performance-metric-no-one-is-talking-about',
       },
     },
     'jong-chan-choi': {
@@ -71,7 +71,7 @@ export const en: typeof ko = {
       title: 'Understanding and Optimizing Interaction to Next Paint (INP)',
       link: {
         slide:
-          'https://drive.google.com/file/d/1jyUNCx6T0MZhKkNSOaf218LbpZg1yzwU/view',
+          'https://speaking.jeremy.codes/tqo2nq/optimizing-interaction-to-next-paint-inp',
       },
     },
     'hung-viet-nguyen': {
@@ -79,7 +79,7 @@ export const en: typeof ko = {
       title: 'How I got 1600 stars on GitHub in 2 months of Open Source work',
       link: {
         slide:
-          'https://drive.google.com/file/d/13oaDGgamR_-8kC6iQAfz8n_C0gxjNJDg/view',
+          ' https://jsconf.hung.dev/1',
       },
     },
     'jeong-eun-lee': {
@@ -87,7 +87,7 @@ export const en: typeof ko = {
       title: 'if (extensible design)  return "work life balance"',
       link: {
         slide:
-          'https://docs.google.com/presentation/d/1CmpaGsKMTd5Y-xlpXs4BBQUq989dRvmC/edit#slide=id.p1',
+          'https://github.com/chbin05/JSConfKorea2022',
       },
     },
     'nicol-ribaudo': {
@@ -96,7 +96,7 @@ export const en: typeof ko = {
         'Records & Tuples are coming: the next exciting JavaScript feature',
       link: {
         slide:
-          'https://nicolo-ribaudo.github.io/2022-09-jsconf-korea-slides/#/1',
+          'https://nicolo-ribaudo.github.io/2022-09-jsconf-korea-slides/',
       },
     },
     'chen-hui-jing': {
@@ -126,7 +126,7 @@ export const en: typeof ko = {
       title: `Is it Okay to Pursue Functional Programming on Frontend?`,
       link: {
         slide:
-          'https://drive.google.com/file/d/1P_XzZOoI4XMlXpJbzRIf8O_f1oAaf31b/view',
+          'https://moonlit-nougat-422445.netlify.app/1',
       },
     },
     'anuradha-kumari': {
