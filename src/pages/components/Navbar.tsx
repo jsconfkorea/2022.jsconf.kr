@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl'
-import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
@@ -59,12 +58,6 @@ export function Navbar() {
                 scroll={false}
               >
                 <a className="flex w-28 justify-center gap-1.5 p-2.5 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black">
-                  <Image
-                    src={`/${targetLocale}.png`}
-                    width={20}
-                    height={20}
-                    alt={locale === 'ko' ? t('english') : t('korean')}
-                  />
                   <span className="text-lg">
                     {locale === 'ko' ? t('english') : t('korean')}
                   </span>
@@ -139,12 +132,6 @@ export function Navbar() {
                   }}
                   className="mx-12 flex h-[44px] min-w-[256px] max-w-xs justify-center self-center rounded-lg px-2 hover:bg-[#ffffff1a] active:bg-[#efdb4f] active:text-black"
                 >
-                  <Image
-                    src={`/${targetLocale}.png`}
-                    width={20}
-                    height={20}
-                    alt={locale === 'ko' ? t('english') : t('korean')}
-                  />
                   <span>{locale === 'ko' ? t('english') : t('korean')}</span>
                 </a>
               </Link>
