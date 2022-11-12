@@ -54,6 +54,7 @@ export const ko = {
       link: {
         slide:
           'https://www.slideshare.net/AnnaMigas1/the-secret-web-performance-metric-no-one-is-talking-about',
+        talk: 'https://youtu.be/NCV0xsMp4Jw',
       },
     },
     'jong-chan-choi': {
@@ -62,6 +63,7 @@ export const ko = {
       link: {
         slide:
           'https://docs.google.com/presentation/d/1lIHV5hdE46i3ZFw--yNM7loyh-rsUskiBvrvOJWm6Us/edit',
+        talk: 'https://youtu.be/FazNzl6Ei3A',
       },
     },
     'jeremy-wagner': {
@@ -70,6 +72,7 @@ export const ko = {
       link: {
         slide:
           'https://speaking.jeremy.codes/tqo2nq/optimizing-interaction-to-next-paint-inp',
+        talk: 'https://youtu.be/BoaORHnJYAE',
       },
     },
     'hung-viet-nguyen': {
@@ -78,6 +81,7 @@ export const ko = {
       link: {
         slide:
           'https://jsconf.hung.dev/1',
+        talk: 'https://youtu.be/1CZjE3cDLbY',
       },
     },
     'jeong-eun-lee': {
@@ -86,6 +90,7 @@ export const ko = {
       link: {
         slide:
           'https://github.com/chbin05/JSConfKorea2022',
+        talk: 'https://youtu.be/eewc_hCvCsg',
       },
     },
     'nicol-ribaudo': {
@@ -94,6 +99,7 @@ export const ko = {
       link: {
         slide:
           'https://nicolo-ribaudo.github.io/2022-09-jsconf-korea-slides/',
+        talk: 'https://youtu.be/DQTmEhBI41o',
       },
     },
     'chen-hui-jing': {
@@ -101,6 +107,7 @@ export const ko = {
       title: '엔터프라이즈 CSS grid의 다양한 특징',
       link: {
         slide: 'https://huijing.github.io/slides/99-jsconfkr-2022/',
+        talk: 'https://youtu.be/r3O3Fj1H2yw',
       },
     },
     'dwane-hemmings': {
@@ -109,6 +116,7 @@ export const ko = {
       link: {
         slide:
           'https://drive.google.com/file/d/1lF7RsuH7dmXI9aDw71QGGwmGSU126ZkH/view',
+        talk: 'https://youtu.be/JFotV9Fb6cI',
       },
     },
     'seok-ju-na': {
@@ -116,6 +124,7 @@ export const ko = {
       title: 'React로 영수증 출력해보기 (부제: 자바스크립트로 POS를 만든다고?)',
       link: {
         slide: 'https://slides.com/seokjume/react-thermal-print',
+        talk: 'https://youtu.be/FFolxFrUgoQ',
       },
     },
     'minsu-kim-changhui-lee': {
@@ -124,6 +133,7 @@ export const ko = {
       link: {
         slide:
           'https://moonlit-nougat-422445.netlify.app/1',
+        talk: 'https://youtu.be/IqdvgzV_nms',
       },
     },
     'anuradha-kumari': {
@@ -132,6 +142,7 @@ export const ko = {
       link: {
         slide:
           'https://docs.google.com/presentation/d/1ses9V7gl9OYloOeUVnqK7n3wCnZURfOJwN54ivEEjnc/edit#slide=id.p',
+        talk: 'https://youtu.be/LhYkzhAC7PU',
       },
     },
     'eleanor-rumsey': {
@@ -140,6 +151,7 @@ export const ko = {
       link: {
         slide:
           'https://github.com/eleanorRumsey/jsConfKorea2022/blob/main/HowToFailSuccessfully.pdf',
+        talk: 'https://youtu.be/ybbw71aWu4o',
       },
     },
     'yong-wook-choi': {
@@ -147,6 +159,7 @@ export const ko = {
       title: `Deno: 차세대 JavaScript 런타임`,
       link: {
         slide: 'https://github.com/hyp3rflow/jsconf-kr-2022-deno',
+        talk: '',
       },
     },
     'erick-wendel': {
@@ -155,6 +168,7 @@ export const ko = {
       link: {
         slide:
           'https://www.icloud.com/keynote/0ebVCpbGca71WwkLlffcaSsyQ#The_Journey_About_How_I_Fixed_a_Bug_in_the_Node.js_Core_that_Affected_Thousands_of_Packages_-_jsconfkorea_-_17092022',
+        talk: 'https://youtu.be/cxUWZoirTZk',
       },
     },
     // Sponsor session

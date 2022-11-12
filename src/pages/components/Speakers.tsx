@@ -73,9 +73,15 @@ export const Speakers = () => {
                       <path d="M8 12l3 -3l2 2l3 -3"></path>
                     </svg>
                   </a>
+                  <a
+                    href={t(`${speaker}.link.talk`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Talks"
+                  >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-brand-youtube cursor-not-allowed opacity-40"
+                    className="icon icon-tabler icon-tabler-brand-youtube cursor-pointer opacity-80 hover:opacity-100"
                     width={24}
                     height={24}
                     viewBox="0 0 24 24"
@@ -89,6 +95,7 @@ export const Speakers = () => {
                     <rect x={3} y={5} width={18} height={14} rx={4}></rect>
                     <path d="M10 9l5 3l-5 3z"></path>
                   </svg>
+                  </a>
                 </div>
                 <h3 className="text-[13px] font-semibold leading-4 sm:text-base">
                   <Link href={`/speakers/${speaker}`}>
