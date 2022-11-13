@@ -162,7 +162,7 @@ export const en: typeof ko = {
       title: `Deno: Next Generation JavaScript Runtime`,
       link: {
         slide: 'https://github.com/hyp3rflow/jsconf-kr-2022-deno',
-        talk: '',
+        talk: 'https://youtu.be/WtQlAzhE3gY',
       },
     },
     'erick-wendel': {

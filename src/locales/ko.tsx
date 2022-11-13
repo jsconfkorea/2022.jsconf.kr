@@ -159,7 +159,7 @@ export const ko = {
       title: `Deno: 차세대 JavaScript 런타임`,
       link: {
         slide: 'https://github.com/hyp3rflow/jsconf-kr-2022-deno',
-        talk: '',
+        talk: 'https://youtu.be/WtQlAzhE3gY',
       },
     },
     'erick-wendel': {
